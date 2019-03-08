@@ -7,6 +7,10 @@ class: center, middle
 ---
 # Exercise 1: Setup your toolchain and a new React project
 
+Study [React crash course](https://www.youtube.com/watch?v=sBws8MSXN7A) from 0:00 to 39:52
+
+### Exercise
+
 **a.**
 
 Check: [Create React App](https://github.com/facebook/create-react-app)
