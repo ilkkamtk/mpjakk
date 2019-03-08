@@ -45,6 +45,7 @@ Course content is inside [docs](docs/) folder.
 1. [Longer React course](https://www.youtube.com/watch?v=DLX62G4lc44&t=435s)
     * [Same as an interactive course](https://scrimba.com/g/glearnreact)
 1. [Online book: React.js Training](https://rangle-io.gitbooks.io/react-training/content/)
+6. [Full stack open (in Finnish)](https://fullstackopen.github.io/)
 
 ### Other
 

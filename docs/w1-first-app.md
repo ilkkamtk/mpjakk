@@ -65,6 +65,7 @@ Check: [Create React App](https://github.com/facebook/create-react-app)
       'rules': {
         'react/jsx-uses-react': 'error',
         'react/jsx-uses-vars': 'error',
+        'no-console': 0,
       },
       'settings': {
         'react': {
@@ -172,7 +173,7 @@ Check: [Create React App](https://github.com/facebook/create-react-app)
     * Iterate picArray in tbody to create multiple tr components
     
 1. Develop your app further. Open 'filename' image when `<a>` is clicked.
-1. Develop your app further. Add more CSS.
+1. (Optional) Develop your app further. Add more CSS. For example open 'filename' image to your self made modal.
 1. git add, commit & push to remote repository 
 
 ---
