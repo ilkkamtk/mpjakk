@@ -91,46 +91,51 @@ Check: [Create React App](https://github.com/facebook/create-react-app)
 
 **c.**
 
-1. Develop your app further. Add a list to the app skeleton so that the layout is similar to this: 
+1. Develop your app further. Add a `<table>` to the app skeleton so that the layout is similar to this: 
 
     ![View 1](./images/app1.png)
-1. Develop your app further. Make the list dynamically by using this array and *ngFor:
-    ```typescript
-    // add this to home.ts before @Component
-    class Pic {
-      constructor(
-        public title: string,
-        public details: string,
-        public thumbnail: string,
-        public original: string,
-      ) {
-      }
-    
-    }
-    
-    // add this to HomePage component
-    picArray: Pic[] = [
+
+1. You can use placekitten.com or similar site for the images
+
+**d.**
+
+1. Develop your app further. Make the table dynamically by using this array:
+    ```javascript
+      
+    const picArray = [
         {
           'title': 'Title 1',
-          'details': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sodales enim eget leo condimentum vulputate. Sed lacinia consectetur fermentum. Vestibulum lobortis purus id nisi mattis posuere. Praesent sagittis justo quis nibh ullamcorper, eget elementum lorem consectetur. Pellentesque eu consequat justo, eu sodales eros.',
-          'thumbnail': 'http://placekitten.com/310/302',
-          'original': 'http://placekitten.com/2048/1920',
+          'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sodales enim eget leo condimentum vulputate. Sed lacinia consectetur fermentum. Vestibulum lobortis purus id nisi mattis posuere. Praesent sagittis justo quis nibh ullamcorper, eget elementum lorem consectetur. Pellentesque eu consequat justo, eu sodales eros.',
+          'thumbnails': {
+                   w160: 'http://placekitten.com/160/161'
+            }
+         ,
+          'filename': 'http://placekitten.com/2048/1920',
         },
         {
     
           'title': 'Title 2',
-          'details': 'Donec dignissim tincidunt nisl, non scelerisque massa pharetra ut. Sed vel velit ante. Aenean quis viverra magna. Praesent eget cursus urna. Ut rhoncus interdum dolor non tincidunt. Sed vehicula consequat facilisis. Pellentesque pulvinar sem nisl, ac vestibulum erat rhoncus id. Vestibulum tincidunt sapien eu ipsum tincidunt pulvinar. ',
-          'thumbnail': 'http://placekitten.com/321/300',
-          'original': 'http://placekitten.com/2041/1922',
+          'description': 'Donec dignissim tincidunt nisl, non scelerisque massa pharetra ut. Sed vel velit ante. Aenean quis viverra magna. Praesent eget cursus urna. Ut rhoncus interdum dolor non tincidunt. Sed vehicula consequat facilisis. Pellentesque pulvinar sem nisl, ac vestibulum erat rhoncus id. Vestibulum tincidunt sapien eu ipsum tincidunt pulvinar. ',
+          'thumbnails': {
+               w160: 'http://placekitten.com/160/162'
+        },
+          'filename': 'http://placekitten.com/2041/1922',
         },
         {
           'title': 'Title 3',
-          'details': 'Phasellus imperdiet nunc tincidunt molestie vestibulum. Donec dictum suscipit nibh. Sed vel velit ante. Aenean quis viverra magna. Praesent eget cursus urna. Ut rhoncus interdum dolor non tincidunt. Sed vehicula consequat facilisis. Pellentesque pulvinar sem nisl, ac vestibulum erat rhoncus id. ',
-          'thumbnail': 'http://placekitten.com/319/301',
-          'original': 'http://placekitten.com/2039/1920',
+          'description': 'Phasellus imperdiet nunc tincidunt molestie vestibulum. Donec dictum suscipit nibh. Sed vel velit ante. Aenean quis viverra magna. Praesent eget cursus urna. Ut rhoncus interdum dolor non tincidunt. Sed vehicula consequat facilisis. Pellentesque pulvinar sem nisl, ac vestibulum erat rhoncus id. ',
+          'thumbnails': {
+               w160: 'http://placekitten.com/160/163'
+        },
+          'filename': 'http://placekitten.com/2039/1920',
         },
       ];
     ```
+
+1. git add, commit & push to remote repository 
+
+**e.**
+    
 1. Develop your app further. Open 'original' image when 'view'-button is clicked.
    - Use [PhotoViever](https://ionicframework.com/docs/native/photo-viewer/) plugin to display the selected image
    ```sh
