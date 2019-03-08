@@ -5,90 +5,48 @@ class: center, middle
 ## 1/2019
 
 ---
-# Exercise 1: Setup your toolchain and a new Ionic project
+# Exercise 1: Setup your toolchain and a new React project
 
 **a.**
 
-Check: [Ionic docs](https://ionicframework.com/getting-started#cli)
+Check: [Create React App](https://github.com/facebook/create-react-app)
 
 1. If needed, install code editor (+ extensions), git, npm
-1. Install Ionic `npm install -g ionic`
-1. If you want to use iOS, install ios-deploy `npm install -g ios-deploy`
-    - you can also add  application pakage name: `--id com.mycompany.myapp`
-1. Use the `ionic` cli tool to generate a _blank_ app skeleton `ionic start myFirstApp blank --type=ionic-angular`
-   1. Answer no to 4.0 and appflow suggestions 
-1. Test that app works, run it with `ionic <command>` and open in browser
-   - `cd myFirstApp`
-   - `ionic serve`
+1. Use the `create-react-app` cli tool to generate an app skeleton `npx create-react-app my-app`
+1. Test that app works; run it and open in browser
+   - `cd my-app`
+   - `yarn start`
 1. Create a remote git repository and push your app there
 
 **b.**  
-1. Install TSlint to your project `npm i -D tslint tslint-ionic-rules` 
-1. [Enable TSLint in your project](https://www.jetbrains.com/help/webstorm/tslint.html)
-   - tslint.json contents:
+1. Install ESlint to your project `yarn add -D eslint eslint-plugin-react eslint-config-google`
+1. Initialize ESlint: `yarn eslint --init`
+    * Choose:
+        1. To check syntax, find problems, and enforce code style
+        1. JavaScript modules (import/export)
+        1. React 
+        1. Browser
+        1. Use a popular style guide
+        1. Google
+        1. JSON
+        1. n (because already installed)
+1. [Enable ESLint in your project](https://www.jetbrains.com/help/webstorm/eslint.html)
+   - Modify .eslintrc.json:
    ```json
-   {
-     "defaultSeverity": "warning",
-     "extends": "tslint-ionic-rules",
-     "jsRules": {},
-     "rules": {
-       "no-duplicate-variable": true,
-       "no-floating-promises": {
-         "severity": "error"
-       },
-       "promise-function-async": true,
-       "no-unused-variable": [
-         true
-       ],
-       "no-var-requires": false
-     },
-     "rulesDirectory": [
-       "node_modules/tslint-eslint-rules/dist/rules"
-     ]
-   }
+    "extends": [
+       "google",
+       "eslint:recommended",
+       "plugin:react/recommended"
+     ],
    ```
-1. Run `npm run lint` and fix possible errors in your code.
-1. You can edit settings/editor/code style/typescript to correct code automatically with ctr-alt-l
-1. Test on emulator
-   - `ionic cordova emulate android -lc`
-   - `ionic cordova emulate ios -lc`
-1. If you run into problems
-   1. run `ionic cordova requirements`
-   1. fix the unmet requirements
-      - Wrong android emulator fix:
-         - Android studio  Preferences... > Appearance & Behavior > System Settings > Android SDK > SDK Platform
-      - iOS emulator problem fix:
-         - edit scripts in package.json:
-         ```json
-            "scripts": {
-              "start": "ionic-app-scripts serve",
-              "clean": "ionic-app-scripts clean",
-              "build": "ionic-app-scripts build",
-              "lint": "ionic-app-scripts lint",
-              "emulate-live": "ionic cordova emulate ios -lc --debug --target=\"iPhone-X\" -- --buildFlag=\"-UseModernBuildSystem=0\"",
-              "emulate-live-iPhone-8-Plus": "ionic cordova emulate ios -lc --target=\"iPhone-8-Plus\" -- --buildFlag=\"-UseModernBuildSystem=0\"",
-              "emulate": "ionic cordova emulate ios --target=\"iPhone-X\" -- --buildFlag=\"-UseModernBuildSystem=0\"",
-              "build-prod": "ionic cordova build ios --prod --release -- --buildFlag=\"-UseModernBuildSystem=0\"",
-              "device": "ionic cordova run ios -- --buildFlag=\"-UseModernBuildSystem=0\""
-            }            
-         ```
-         - use e.g `npm run emulate-live` to start emulator
-      - Mac OS Java or Android Studio not found:
-         - `sudo nano ~/.bash_profile`
-         - add 
-         ```text
-            export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-            export ANDROID_SDK_ROOT=/Users/[your_username_here]/Library/Android/sdk
-            export PATH=$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/platform-tools:$PATH
-         ```
-         - `source .bash_profile`
-      - Gradle not found
-         - [install gradle](https://gradle.org/install/)
+1. If you want to lint a certain file: `yarn eslint src/App.js`.
+1. You can correct code automatically with ctr-alt-l (remember to choose Google style form settings(preferences)/editor/code style/javascript first)
 
 **c.**
 
 1. Develop your app further. Add a list to the app skeleton so that the layout is similar to this: 
-![View 1](./images/app1.png)
+
+    ![View 1](./images/app1.png)
 1. Develop your app further. Make the list dynamically by using this array and *ngFor:
     ```typescript
     // add this to home.ts before @Component
