@@ -6,7 +6,7 @@ class: center, middle
 
 ---
 
-# HTTP 2
+# AJAX 2
 
 1. Continue last exercise. Create a new branch with git.
 1. Create new folder 'utils' to 'src' folder
