@@ -1,6 +1,6 @@
 class: center, middle
 
-# HTTP, State
+# AJAX, Routing
 
 ## 2/2019
 

@@ -1,6 +1,6 @@
 class: center, middle
 
-# WBMA, Ionic HTTP Client
+# AJAX + state
 
 ## 1/2019
 
@@ -8,17 +8,18 @@ class: center, middle
 
 Study [React crash course](https://www.youtube.com/watch?v=sBws8MSXN7A) from 1:25:55 to 1:38:23
 
-# Fetching data with HTTP Client, Task A
+# Fetching data with AJAX, Task A
 
 1. Continue last exercise. Create a new branch `http-a` with git and checkout it (`git checkout -b http-a`).
 1. Save [test.json](./assets/test.json) into 'public' folder of your project.
 1. In App.js, use fetch or axios to load test.json
+    - fetch is used in the exaples
 1. First log the data using `console.log()`
-1. Then print the data to the table made in last exercise
+1. Save the data to state and then print the data to the table made in last exercise
 
 ---
 
-# Fetching data with HTTP Client, Task B
+# Fetching data with AJAX, Task B
 
 1. Continue last exercise. Create a new git branch `http-b` and use it.
 1. Modify the app so that you fetch the data from the media API instead of test.json
@@ -26,7 +27,7 @@ Study [React crash course](https://www.youtube.com/watch?v=sBws8MSXN7A) from 1:2
     - base url: http://media.mw.metropolia.fi/wbma/
     - Media files location: http://media.mw.metropolia.fi/wbma/uploads/
 1. First log the data using ```console.log()```
-    - Note that '/media' endpoint doesn't give you thumbnails. You need to do a second request to '/media/:id' to get also thumbnails.
+    - Note that '/media' endpoint doesn't give you thumbnails. You need to do a nested request to '/media/:id' to get also thumbnails.
         - Study Promise.all [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) and [here](http://promise-nuggets.github.io/articles/14-map-in-parallel.html)
         - example: 
         ```javascript
@@ -41,4 +42,4 @@ Study [React crash course](https://www.youtube.com/watch?v=sBws8MSXN7A) from 1:2
             // save items to state
           });
         ```
-1. Then print the data to the table
+1. Save the data to state and then print the data to the table
