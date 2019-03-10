@@ -9,7 +9,7 @@
 1. [Week 1 - AJAX, State](docs/w1-http.md)
 1. [Week 2 - AJAX, Route](docs/w2-http+route.md)
 1. [Week 2 - Routing & login](docs/w2-login.md)
-1. [Week 3 - Pipes](docs/w3-pipe.md)
+1. [Week 3 - Material-UI](docs/w3-Material-UI.md)
 1. [Week 3 - Forms](docs/w3-forms.md)
 1. [Week 4 - File upload](docs/w4-upload.md)
 1. [Week 4 - File upload part 2](docs/w4-upload2.md)
