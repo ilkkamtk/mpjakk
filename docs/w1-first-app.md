@@ -34,8 +34,9 @@ Check: [Create React App](https://github.com/facebook/create-react-app)
         1. Google
         1. JavaScript
         1. n (because already installed)
-1. [Enable ESLint in your project](https://www.jetbrains.com/help/webstorm/eslint.html)
-   - Modify .eslintrc.js:
+1. Enable ESLint in your WebStrom project
+   - [Instructions](https://www.jetbrains.com/help/webstorm/eslint.html)
+1. Modify .eslintrc.js:
    ```JavaScript
     module.exports = {
       'parser': 'babel-eslint',
@@ -174,6 +175,23 @@ Check: [Create React App](https://github.com/facebook/create-react-app)
     
 1. Develop your app further. Open 'filename' image when `<a>` is clicked.
 1. (Optional) Develop your app further. Add more CSS. For example open 'filename' image to your self made modal.
-1. git add, commit & push to remote repository 
+1. git add, commit & push to remote repository
+1. Deploy project to your public_html (see below for instructions)
 
 ---
+
+## Deploy React Project
+
+1. Add to package.json:
+    ```json
+    {
+    ...,
+    "homepage": "."
+    }
+    ```
+1. Run `yarn build`
+1. Set deployment settings in WebStorm:
+    ![Build conf0](./images/build_conf0.png)
+    ![Build conf1](./images/build_conf1.png)
+    ![Build conf2](./images/build_conf2.png)
+1. Move build folder to your public_html
