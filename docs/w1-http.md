@@ -16,6 +16,8 @@ Study [React crash course](https://www.youtube.com/watch?v=sBws8MSXN7A) from 1:2
     - fetch is used in the exaples
 1. First log the data using `console.log()`
 1. Save the data to state and then print the data to the table made in last exercise
+1. git add, commit & push to remote repository
+1. Deploy project to your public_html 
 
 ---
 
@@ -43,3 +45,5 @@ Study [React crash course](https://www.youtube.com/watch?v=sBws8MSXN7A) from 1:2
           });
         ```
 1. Save the data to state and then print the data to the table
+1. git add, commit & push to remote repository
+1. Deploy project to your public_html 

@@ -50,6 +50,8 @@ class: center, middle
     export {getAllMedia}
     ```
 1. In App.js use getAllMedia in componentDidMount-hook to add images to state and display the data in table the same as last exercise.
+1. git add, commit & push to remote repository
+1. Deploy project to your public_html 
 
 ---
 
