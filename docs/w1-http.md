@@ -13,7 +13,7 @@ Study [React crash course](https://www.youtube.com/watch?v=sBws8MSXN7A) from 1:2
 1. Continue last exercise. Create a new branch `http-a` with git and checkout it (`git checkout -b http-a`).
 1. Save [test.json](./assets/test.json) into 'public' folder of your project.
 1. In App.js, use fetch or axios to load test.json
-    - fetch is used in the exaples
+    - fetch is used in the examples
 1. First log the data using `console.log()`
 1. Save the data to state and then print the data to the table made in last exercise
 1. git add, commit & push to remote repository
