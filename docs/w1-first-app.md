@@ -184,10 +184,7 @@ Check: [Create React App](https://github.com/facebook/create-react-app)
 
 1. Add to package.json (e.g after devDependencies):
     ```json
-    {
-    ...
      "homepage": "."
-    }
     ```
 1. Run `yarn build`
 1. Set deployment settings in WebStorm:
