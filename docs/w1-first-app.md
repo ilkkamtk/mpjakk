@@ -182,7 +182,7 @@ Check: [Create React App](https://github.com/facebook/create-react-app)
 
 ## Deploy React Project
 
-1. Add to package.json (e.g after devDependencies):
+1. Add following to package.json (e.g after devDependencies):
     ```json
      "homepage": "."
     ```
