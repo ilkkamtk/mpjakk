@@ -182,11 +182,11 @@ Check: [Create React App](https://github.com/facebook/create-react-app)
 
 ## Deploy React Project
 
-1. Add to package.json:
+1. Add to package.json (e.g after devDependencies):
     ```json
     {
-    ...,
-    "homepage": "."
+    ...
+     "homepage": "."
     }
     ```
 1. Run `yarn build`
