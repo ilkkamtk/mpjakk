@@ -93,7 +93,7 @@ Check: [Create React App](https://github.com/facebook/create-react-app)
       },
     };
    ```
-1. If you want to lint a certain file: `yarn eslint src/App.js`.
+1. If you want to lint a certain file: `yarn eslint src/App.js` or `./node_modules/.bin/eslint src/App.js`.
 1. You can correct code automatically with ctr-alt-l (remember to choose Google style form settings(preferences)/editor/code style/javascript first)
 
 **c.**
