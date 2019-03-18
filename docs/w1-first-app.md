@@ -159,7 +159,7 @@ Check: [Create React App](https://github.com/facebook/create-react-app)
       ];
     ```
 
-1. Create components for table, tbody and td.
+1. Create components for table, tbody and tr.
     * Hierarchy:
     ```text
     App
