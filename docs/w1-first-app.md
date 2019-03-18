@@ -23,7 +23,7 @@ Check: [Create React App](https://github.com/facebook/create-react-app)
 1. Create a remote git repository and push your app there
 
 **b.**  
-1. Install ESlint to your project `yarn add -D eslint eslint-plugin-react eslint-config-google`
+1. Install ESlint to your project `yarn add -D eslint@5.12.0 eslint-plugin-react eslint-config-google`
 1. Initialize ESlint: `yarn eslint --init`
     * Choose:
         1. To check syntax, find problems, and enforce code style
@@ -170,6 +170,7 @@ Check: [Create React App](https://github.com/facebook/create-react-app)
                ...
  
     ```
+    * you can put each comoponent (table, tbody, tr) to one file or you can make own file for each component 
     * Pass picArray as props from App to table to tbody.
     * Iterate picArray in tbody to create multiple tr components
     

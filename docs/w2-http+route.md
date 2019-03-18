@@ -28,7 +28,7 @@ class: center, middle
     export {getAllMedia}
     ```
 1. In App.js use getAllMedia in componentDidMount-hook to add images to state and display the data in table the same as last exercise.
-
+    - when using webStorm MediaAPI.js should be auto imported. If not, import it manually.
 # Routing
 
 1. Create folder 'views' to folder 'src'
