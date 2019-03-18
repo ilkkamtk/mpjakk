@@ -137,8 +137,7 @@ Check: [Create React App](https://github.com/facebook/create-react-app)
             'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sodales enim eget leo condimentum vulputate. Sed lacinia consectetur fermentum. Vestibulum lobortis purus id nisi mattis posuere. Praesent sagittis justo quis nibh ullamcorper, eget elementum lorem consectetur. Pellentesque eu consequat justo, eu sodales eros.',
             'thumbnails': {
               w160: 'http://placekitten.com/160/161',
-            }
-            ,
+            },
             'filename': 'http://placekitten.com/2048/1920',
           },
           {
