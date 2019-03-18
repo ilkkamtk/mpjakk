@@ -24,7 +24,7 @@ Check: [Create React App](https://github.com/facebook/create-react-app)
 
 **b.**  
 1. Install ESlint to your project `yarn add -D eslint@5.12.0 eslint-plugin-react eslint-config-google`
-1. Initialize ESlint: `yarn eslint --init`
+1. Initialize ESlint: `yarn eslint --init` or `node eslint --init` or `./node_modules/.bin/eslint --init` or `node node_modules\eslint\bin\eslint.js --init`
     * Choose:
         1. To check syntax, find problems, and enforce code style
         1. JavaScript modules (import/export)
