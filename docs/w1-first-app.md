@@ -194,7 +194,7 @@ Check: [Create React App](https://github.com/facebook/create-react-app)
     ```json
      "homepage": "."
     ```
-1. Run `yarn build`
+1. Run `yarn build` or `npm run build`
 1. Set deployment settings in WebStorm:
     ![Build conf0](./images/build_conf0.png)
     ![Build conf1](./images/build_conf1.png)
