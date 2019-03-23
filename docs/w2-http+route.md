@@ -1,5 +1,3 @@
-class: center, middle
-
 # AJAX, Routing
 
 ## 2/2019
@@ -27,13 +25,17 @@ class: center, middle
     ...
     export {getAllMedia}
     ```
-1. In App.js use getAllMedia in componentDidMount-hook to add images to state and display the data in table the same way as last exercise.
+1. In App.js use getAllMedia in componentDidMount-hook to add files to state and display the data in table the same way as last exercise.
     - when using webStorm MediaAPI.js should be auto imported. If not, import it manually.
 
 # Routing 
 
 Study [React crash course](https://www.youtube.com/watch?v=sBws8MSXN7A) from 1:15:48  to 1:25:44
 
+1. Install react-router-dom with npm or yarn
+1. Goal is to make a navigation between three 'pages'
+    * main menu has two links: 'Home' and 'Profile'
+    * Each media file has 'view' link next to it. Clicking that should take to 'Single'
 1. Create new component 'Nav.js' (to components folder)
     * content for Nav.js:
     ```javascript
@@ -57,28 +59,28 @@ Study [React crash course](https://www.youtube.com/watch?v=sBws8MSXN7A) from 1:1
     export default Nav;
     ```
 1. Add Nav-component to App.js so that you can see it above Table component in browser
-1. Create folder 'views' to folder 'src'
-1. Create 'Front.js', 'Single.js' and 'Profile.js' to 'views'
-    * Front.js will be the component that should show first when the app starts
-    * Move the following jsx from App.js to Front.js
+1. Create new folder 'views' to folder 'src'
+1. Create 'Home.js', 'Single.js' and 'Profile.js' to 'views'
+    * Home.js will be the component that should show first when the app starts
+    * Move the following jsx from App.js to Home.js
     ```jsx harmony
       <Table picArray={this.state.picArray}/>
     ```
     * Replace it with
     ```jsx harmony
-      <Front picArray={this.state.picArray} />
+      <Home picArray={this.state.picArray} />
     ``` 
-    * In Front.js, make the moved code to use props instead of state.
-    * The app should now work the same as before
+    * In Home.js, make the moved code to use props instead of state.
+    * The app should at this point work the same as before
 1. Content for Profile.js (this is a [function component](https://reactjs.org/docs/components-and-props.html#function-and-class-components)):
     ```javascript
     import React from 'react';
     
     const Profile = (props) => {
       return (
-          <div>
+          <React.Fragment>
             <h1>Profile</h1>
-          </div>
+          </React.Fragment>
       );
     };
     
@@ -115,25 +117,22 @@ Study [React crash course](https://www.youtube.com/watch?v=sBws8MSXN7A) from 1:1
    
    export default Single;
    ```
-1. 
-    
+1. Study the video above and create routing described in bullet 2.
+
+## Show single file (State in sub component)
+  
 1. In 'mediaAPI.js' make function getSingleMedia and [export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export) it.
     - getSingleMedia should fetch one media file with thumbnails from MediaAPI (just like last exercise)
     * example: 
     ```javascript
     ...
-    const getAllMedia = () => {    
-     return fetch(apiUrl).then(param => {
-     ...then(someParam => {
-           return Promise.all(someParam.map(item => {
-             return fetch(...
-             ...
-       }
-    }
+    const getSingleMedia = (id) => {
+      return fetch(...
+    };
     ...
-    export {getAllMedia}
     ```
-1. In App.js use getAllMedia in componentDidMount-hook to add images to state and display the data in table the same as last exercise.
+1. In Home.js make the 'view' link to open 'Single' component and send file_id as a parameter.
+1. In Single.js receive the file_id parameter and use getSingleMedia in componentDidMount-hook to add file to state and display the title in `<h1>` element and file in `<img>` element.
 1. git add, commit & push to remote repository
 1. Deploy project to your public_html 
 
