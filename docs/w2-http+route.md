@@ -118,7 +118,13 @@ Study [React crash course](https://www.youtube.com/watch?v=sBws8MSXN7A) from 1:1
    export default Single;
    ```
 1. Study the video above and create routing described in bullet 2.
-
+    ```jsx harmony
+    // sending props to route
+    <Route path="/example" render={(props) => (
+                    <Example {...props} file={this.state.file}/>
+                )}/>
+    ```
+1. [three dots](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 ## Show single file & local state
   
 1. In 'mediaAPI.js' make function getSingleMedia and [export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export) it.
