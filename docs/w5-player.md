@@ -1,6 +1,3 @@
-class: center, middle
-
-# WBMA
 
 ## 5/2018
 
@@ -11,7 +8,7 @@ class: center, middle
 ### Task: Create page for viewing single media files
 
 1. Continue the previous exercise. Create a new git branch for these tasks.
-1. Create a new page 'player' (PlayerPage) for viewing single media files. Features:
+1. Modify a new file 'Single.js'. Features:
     - get a single file from API
     - depending on file type use `<img>`, `<video>` or `<audio>` to show/play media file
         - <http://www.w3schools.com/tags/tag_video.asp>
@@ -23,21 +20,7 @@ class: center, middle
         - optional: likes (request [Favourite endpoint](http://media.mw.metropolia.fi/wbma/docs/#api-Favourite) on the media api)
             - add likes to image(s) with Postman or add 'like' button to PlayerPage
         - optional: show users who like the image
-1. Some help:
-    - Sending parameters
-
-        ```TypeScript
-        someFunction(param1, param2) {
-            this.navCtrl.push(SomePage, {
-              property1: param1,
-              property2: param2
-            });
-          }
-        ```
-    - To use parameters: https://ionicframework.com/docs/api/navigation/NavParams/
- 1. To use CSS filters get rid of Photo Viewer plugin and use `img` element instead
-    - you can use [Pinch zoom npm plugin](http://crystalui.org/components/pinch-zoom) to add similar behavios as Photo Viewer plugin
-    - if filters are saved with JSON.strigify in file's description filed like this :
+ 1. - if filters are saved with JSON.strigify in file's description filed like this :
     ```json
       { 
       ...
@@ -65,13 +48,13 @@ class: center, middle
 ## Show user's files + update
 
 
-1. Add new page 'my-files' (MyFilesPage)
-1. Add a button (for example to profile page) which opens MyFilesPage
+1. Add new page 'MyFiles.js'
+1. Add a button (for example to profile page) which opens MyFiles
 1. Display a list of user's own files
-    - very similar to HomePage
+    - very similar to Home
 1. Add 'view', 'modify' and 'delete' buttons next to each file.
 1. Add corresponding functionality to the buttons
-    - for 'view' use PlayerPage
+    - for 'view' use Single.js
     - delete does not need it's own page
     - modify is 90% same as UploadPage
-        - make a copy of upload.html and remove file chooser
+        - make a copy of Upload.js and remove file chooser

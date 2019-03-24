@@ -12,7 +12,6 @@
 1. [Week 3 - Material-UI](docs/w3-Material-UI.md)
 1. [Week 3 - Forms](docs/w3-forms.md)
 1. [Week 4 - File upload](docs/w4-upload.md)
-1. [Week 4 - File upload part 2](docs/w4-upload2.md)
 1. [Week 5 - Media player](docs/w5-player.md)
 
 Course content is inside [docs](docs/) folder.

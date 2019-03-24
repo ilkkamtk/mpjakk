@@ -34,9 +34,23 @@ class: center, middle
 1. Study [CSS filters](https://css-tricks.com/almanac/properties/f/filter/)
 1. Add [Slider](https://material-ui.com/lab/slider/) elements to change brightness, contrast, saturation and sepia CSS filters
 1. Use [Inline Styles](https://react-cn.github.io/react/tips/inline-styles.html) to add filters to preview image
-1. Save filter settings as [tag](https://react-cn.github.io/react/tips/inline-styles.html) or part of the description when file is uploaded
+1. Save filter settings as JSON (JSON.strigify) in a [tag](https://react-cn.github.io/react/tips/inline-styles.html) or part of the description when file is uploaded
     
     ![adjustments](images/adjustments.png)
+    * example JSON:
+     ```json
+           { 
+           ...
+              "description": "[d]Nice dog[/d][f]{\"brightness\":131,\"contrast\":110,\"warmth\":10,\"saturation\":90}[/f]",
+           ...
+           }
+     ```
+1. Upload button should be activated only when the form is correctly filled
+    - Title is required and minimun length is ?
+    - Description is optional but minimun length is ?
+    - Media file of correct type (image/video/audio) is required
+1. Add reset button for clearing the whole form and image preview
+    
 1. If you have time, try to recreate [Instagram's Juno filter](https://tricky-photoshop.com/how-to-create-instagram-juno-effect-in-photoshop/)
     - instead of sepia filter, you need to create a [SVG-filter](https://css-tricks.com/gooey-effect/) to do the warming filter
     - [feColorMatrix generator](https://kazzkiq.github.io/svg-color-filter/)
