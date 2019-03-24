@@ -1,33 +1,30 @@
-class: center, middle
-
-# WBMA, Ionic Navigation
+# Login, Register
 
 ## 2/2019
 
----
+# Login
 
-_Note 24.1.2019:_ Ionic framework v4 [was published](https://blog.ionicframework.com/introducing-ionic-4-ionic-for-everyone/) yesterday and the docs changed. We are still using v3 for now and the documentation is still available at <https://ionicframework.com/docs/v3/>. If old doc links are broken you can fix them by adding `v3/` into the url after the `docs/` part.   
+1. Install [React Develper Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) to Chrome
+1. Create 'Login.js', to 'views'
+    * This will be the login and register page
+    * Make it to be a class component
+    * Add two forms:
+        * Login form with username and password fields and submit button
+        * Register form with username, password, email and full name fields and submit button
+        * Add local state to Login.js
+        ```javascript
+        state = {
+            username: '',
+            password: '',
+            email: '',
+            full_name: '',
+          };
+        ````
+    * When login or register form is submitted, add values from corresponding form fields to local state 
+    
 
----
-
-# Navigation
-
-1. Continue last exercise. Create a new branch with git.
-1. Create new pages 'menu', 'login-register' and 'logout' (`ionic generate page <PageName> --no-module`)
-1. Create template for the 'login-register' page yourself
-1. Create tab-navigation. Edit 'Menu'-page to add tab navigation. Update the 'rootPage' of the app.
-
-## Some help
-
-- [Tabs](https://ionicframework.com/docs/v3/api/components/tabs/Tabs/#usage)
-- [NavController](https://ionicframework.com/docs/v3/api/navigation/NavController/)
-
----
-
-# Using providers II - Login
-
-1. In the MediaProvider create methods 'register', 'login' and 'checkIfUserExists' with corresponding functionalities
- - 'login'-page: call media API to login user and save user's token to [local storage](http://www.w3schools.com/html/html5_webstorage.asp)
+1. In MediaApi.js create methods 'register', 'login' and 'checkIfUserExists' with corresponding functionalities
+ - Login.js: call MediaApi.js's functions to login user and save user's token to App.js's state
     - when logged in, user is redirected to 'home'
     - if user has already logged in redirect to 'home' (autoredirect)
 - 'register'-page: call media API to create new user 

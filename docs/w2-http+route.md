@@ -119,7 +119,7 @@ Study [React crash course](https://www.youtube.com/watch?v=sBws8MSXN7A) from 1:1
    ```
 1. Study the video above and create routing described in bullet 2.
 
-## Show single file (State in sub component)
+## Show single file & local state
   
 1. In 'mediaAPI.js' make function getSingleMedia and [export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export) it.
     - getSingleMedia should fetch one media file with thumbnails from MediaAPI (just like last exercise)
