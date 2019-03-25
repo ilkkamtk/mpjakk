@@ -151,7 +151,7 @@ Study [React crash course](https://www.youtube.com/watch?v=sBws8MSXN7A) from 1:1
     };
     ...
     ```
-1. In Home.js make the 'view' link to open 'Single' component and send file_id as a parameter.
+1. In Tr.js make the 'view' link to open 'Single' component and send file_id as a parameter.
 1. In Single.js receive the file_id parameter and use getSingleMedia in componentDidMount-hook to add file to state and display the title in `<h1>` element and file in `<img>` element.
 1. git add, commit & push to remote repository
 1. Deploy project to your public_html 
