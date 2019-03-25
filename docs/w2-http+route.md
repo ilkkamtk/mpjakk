@@ -62,6 +62,20 @@ Study [React crash course](https://www.youtube.com/watch?v=sBws8MSXN7A) from 1:1
 1. Create new folder 'views' to folder 'src'
 1. Create 'Home.js', 'Single.js' and 'Profile.js' to 'views'
     * Home.js will be the component that should show first when the app starts
+    * Content for Home.js
+    ```jsx harmony
+    import React from 'react';
+    
+    const Home = (props) => {
+      return (
+          <React.Fragment>
+            <h1>Home</h1>
+          </React.Fragment>
+      );
+    };
+    
+    export default Home;
+    ```
     * Move the following jsx from App.js to Home.js
     ```jsx harmony
       <Table picArray={this.state.picArray}/>
