@@ -140,6 +140,10 @@ Study [React crash course](https://www.youtube.com/watch?v=sBws8MSXN7A) from 1:1
     ```
     ```javascript
 1. [three dots](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+1. To make links work also in subfolders when building add basename attribute to Route:
+    ```jsx harmony
+    <Router basename='/~username/foldername'>
+    ```
 ## Show single file & local state
   
 1. In 'mediaAPI.js' make function getSingleMedia and [export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export) it.
