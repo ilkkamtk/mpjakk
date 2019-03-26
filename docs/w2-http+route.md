@@ -138,6 +138,8 @@ Study [React crash course](https://www.youtube.com/watch?v=sBws8MSXN7A) from 1:1
                     <Example {...props} file={this.state.file}/>
                 )}/>
     ```
+    ```javascript
+1. Study [react-router-dom url parameters](https://tylermcginnis.com/react-router-url-parameters/) to get file_id to Single.js
 1. [three dots](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 ## Show single file & local state
   
