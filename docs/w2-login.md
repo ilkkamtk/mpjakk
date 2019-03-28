@@ -5,6 +5,7 @@
 # Login
 
 1. Install [React Develper Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) to Chrome
+1. Continue last exercise. Create a new branch with git.
 1. Create 'Login.js' and 'Logout.js' to 'views'
     * This will be the login and register page
     * Make it to be a class component
