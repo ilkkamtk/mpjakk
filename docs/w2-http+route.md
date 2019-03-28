@@ -84,7 +84,7 @@ Study [React crash course](https://www.youtube.com/watch?v=sBws8MSXN7A) from 1:1
     ```jsx harmony
       <Home picArray={this.state.picArray} />
     ``` 
-    * In Home.js, make the moved code to use props instead of state.
+    * In Home.js, make the moved code to use props instead of state. Also remove `this`because Home.js is funciton component not class.
     * The app should at this point work the same as before
 1. Content for Profile.js (this is a [function component](https://reactjs.org/docs/components-and-props.html#function-and-class-components)):
     ```javascript
