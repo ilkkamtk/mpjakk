@@ -47,6 +47,22 @@ class: center, middle
            ...
            }
      ```
+    * You can extract filters later like this:
+    ```javascript
+    const pattern = '\\[f\\](.*?)\\[\\/f\\]';
+        const re = new RegExp(pattern);
+        // console.log(re.exec(value));
+        try {
+          return JSON.parse(re.exec(value)[1]);
+        } catch (e) {
+          return {
+            brightness: 100,
+            contrast: 100,
+            warmth: 0,
+            saturation: 100,
+          };
+        }
+       ```
 1. Upload button should be activated only when the form is correctly filled
     - Title is required and minimun length is ?
     - Description is optional but minimun length is ?
