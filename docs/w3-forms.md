@@ -32,7 +32,7 @@ class: center, middle
    - notify user if passwords do not match
 1. Add required input validation to each field
 1. Notify the user about problems when needed
-1. Reset the form after succesful submission
+1. You can also combine username availability with the rest of the form validation
 
 _Note:_ new user registrations without valid username (min length 3 characters), password (min length 5) and email (correctly formatted) are not accepted
 
