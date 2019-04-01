@@ -23,7 +23,7 @@ class: center, middle
 
 ## Task 2: Form validation
 
-- Study [react-form-validator-core](https://www.npmjs.com/package/react-form-validator-core)
+- Study [react-form-validator-core](https://www.npmjs.com/package/react-form-validator-core) and [react-material-ui-form-validator](https://www.npmjs.com/package/react-material-ui-form-validator)
 - User inputs should always be checked before making any api calls
   - username must exist and be long enough
   - password must exist and be long enough
