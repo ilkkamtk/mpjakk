@@ -16,10 +16,7 @@ class: center, middle
 1. When registering check that the username is free just after the username input field gets filled
     - use e.g. `blur` event
     - show notification if username is already in use
-1. Add "confirm password" functionality
-   - add another password field
-   - check that user input of both password fields match before api call
-   - notify user if passwords do not match
+
 
 ## Task 2: Form validation
 
@@ -29,7 +26,10 @@ class: center, middle
   - password must exist and be long enough
   - email format must be correct
   - full name is optional but should be validated if entered?
-
+1. Add "confirm password" functionality
+   - add another password field
+   - check that user input of both password fields match before api call
+   - notify user if passwords do not match
 1. Add required input validation to each field
 1. Notify the user about problems when needed
 1. Reset the form after succesful submission
