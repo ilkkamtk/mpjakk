@@ -62,7 +62,7 @@ class: center, middle
             saturation: 100,
           };
         }
-       ```
+   ```
 1. Upload button should be activated only when the form is correctly filled
     - Title is required and minimun length is ?
     - Description is optional but minimun length is ?
