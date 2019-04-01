@@ -33,6 +33,7 @@ class: center, middle
 ### Task B: Use CSS filters to adjust the image
 1. Study [CSS filters](https://css-tricks.com/almanac/properties/f/filter/)
 1. Add [Slider](https://material-ui.com/lab/slider/) elements to change brightness, contrast, saturation and sepia CSS filters
+    - Read from [this link](https://material-ui.com/lab/about/) about installation.
 1. Use [Inline Styles](https://react-cn.github.io/react/tips/inline-styles.html) to add filters to preview image
 1. Save filter settings as JSON (JSON.strigify) in a [tag](https://react-cn.github.io/react/tips/inline-styles.html) or part of the description when file is uploaded
     
