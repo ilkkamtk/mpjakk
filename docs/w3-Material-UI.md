@@ -10,8 +10,7 @@ class: center, middle
 1. Study [Material Design](https://material.io/design/introduction/) and [Metrial-UI](https://material-ui.com/)
 1. Convert the app we've made so far to use Material-UI
   
-### Task B: Convert logout page to profile page
-1. Change the name of the files and component form logout->profile
+### Task B: Develop profile page
 1. Add avatar image to the user
     - Use postman to upload image and add a tag 'profile' to it
 1. Display users avatar image, name and email in profile page
