@@ -14,7 +14,7 @@ class: center, middle
 1. Create a new file Upload.js  to views folder for the upload functionality
     - add input fields for 'title' (type=text), 'description' (textarea) and 'file' (type=file)
     - accept only media files to file input
-1. Add a button to Home to navigate to UploadPage
+1. Add a button to Nav to navigate to UploadPage
 1. When uploading a file to the API, you need to send [FormData](https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects) 
     - in Upload.js create a method which is called by (change) event of the file input element. In the function log event to console to find out how to get the property that has the file. Save the value of that property to a variable. 
     - create another method to upload the file. create new FormData object, add the file, title and description to the FormData object and send it to the API using MediaProvider. Of course you need to create a new method to MediaProvider.
