@@ -38,7 +38,7 @@ class: center, middle
     - Read from [this link](https://material-ui.com/lab/about/) about installation.
 1. Use [Inline Styles](https://react-cn.github.io/react/tips/inline-styles.html) to add filters to preview image
     - [Material-UI inline styles](https://material-ui.com/customization/overrides/#overriding-with-inline-style)
-1. Save filter settings as JSON (JSON.strigify) in a [tag](https://react-cn.github.io/react/tips/inline-styles.html) or part of the description when file is uploaded
+1. Save filter settings as JSON (JSON.strigify) as part of the description when file is uploaded
     
     ![adjustments](images/adjustments.png)
     * example JSON:
