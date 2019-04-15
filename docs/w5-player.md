@@ -35,7 +35,7 @@
         const re = new RegExp(pattern);
         console.log(re.exec(text));
         try {
-          if (typeof re.exec(text)[1] === 'object') {
+          if (typeof re.exec(text)[1] === 'string') {
             return JSON.parse(re.exec(text)[1]);
           } else {
             return this.state.filters;
