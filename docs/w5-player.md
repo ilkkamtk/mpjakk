@@ -33,13 +33,17 @@
     getFilters = (text) => {
         const pattern = '\\[f\\](.*?)\\[\\/f\\]';
         const re = new RegExp(pattern);
-        // console.log(re.exec(value));
+        console.log(re.exec(text));
         try {
-          return JSON.parse(re.exec(text)[1]);
+          if (typeof re.exec(text)[1] === 'object') {
+            return JSON.parse(re.exec(text)[1]);
+          } else {
+            return this.state.filters;
+          }
         } catch (e) {
           console.log(e);
         }
-      };
+    };
     ```
     ...and description like this:
     ```javascript
