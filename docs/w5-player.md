@@ -63,6 +63,16 @@
 1. Display a list of user's own files
     - very similar to Home
 1. Add 'view', 'modify' and 'delete' buttons next to each file.
+    - onClick example for delete:
+    ```jsx harmony
+     <button onClick={() => {
+       deleteFile(file_id);
+     }}>Delete</button>
+    ```
+    - important! not like this, because it's invoked immediately without click:
+    ```jsx harmony
+    <button onClick={ deleteFile(file_id) }>Delete</button>
+    ```
 1. Add corresponding functionality to the buttons
     - for 'view' use Single.js
     - delete does not need it's own page
