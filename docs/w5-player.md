@@ -18,7 +18,7 @@
         - description
         - user (to get username you need to request [User endpoint](http://media.mw.metropolia.fi/wbma/docs/#api-User-GetUser) using media file's `user_id`)
         - optional: likes (request [Favourite endpoint](http://media.mw.metropolia.fi/wbma/docs/#api-Favourite) on the media api)
-            - add likes to image(s) with Postman or add 'like' button to PlayerPage
+            - add likes to image(s) with Postman or add 'like' button to Single.js
         - optional: show users who like the image
  1. - if filters are saved with JSON.strigify in file's description filed like this :
     ```json
