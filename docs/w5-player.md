@@ -30,20 +30,30 @@
     ```
     You can extract filters later like this:
     ```javascript
-    const pattern = '\\[f\\](.*?)\\[\\/f\\]';
+    getFilters = (text) => {
+        const pattern = '\\[f\\](.*?)\\[\\/f\\]';
         const re = new RegExp(pattern);
         // console.log(re.exec(value));
         try {
-          return JSON.parse(re.exec(value)[1]);
+          return JSON.parse(re.exec(text)[1]);
         } catch (e) {
-          return {
-            brightness: 100,
-            contrast: 100,
-            warmth: 0,
-            saturation: 100,
-          };
+          console.log(e);
         }
-       ```
+      };
+    ```
+    ...and description like this:
+    ```javascript
+    getDescription = (text) => {
+        const pattern = '\\[d\\]((.|[\\r\\n])*?)\\[\\/d\\]';
+        const re = new RegExp(pattern);
+        console.log(re.exec(text));
+        try {
+          return re.exec(text)[1];
+        } catch (e) {
+          return text;
+        }
+    };
+    ```
 
 ## Show user's files + update
 
