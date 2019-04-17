@@ -78,3 +78,5 @@
     - delete does not need it's own page
     - modify is 90% same as UploadPage
         - make a copy of Upload.js and remove file chooser
+        
+### Extra. Study how to [protect routes](https://tylermcginnis.com/react-router-protected-routes-authentication/)
