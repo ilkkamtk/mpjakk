@@ -80,3 +80,21 @@
         - make a copy of Upload.js and remove file chooser
         
 ### Extra. Study how to [protect routes](https://tylermcginnis.com/react-router-protected-routes-authentication/)
+### AJAX error handling
+```javascript
+// MediaAPI.js
+const handleFetchErrors = (response) => {
+  if (!response.ok) {
+    throw Error(response.statusText);
+  }
+  return response;
+}
+
+const getSingleMedia = (id) => {
+  return fetch(apiUrl + 'media/' + id)
+  .then(handleFetchErrors)
+  .then(response => {
+    return response.json();
+  });
+};
+```
