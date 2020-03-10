@@ -1,7 +1,5 @@
 # AJAX, Routing
 
-## 2/2019
-
 ---
 
 # AJAX 2, Move reusable functions to a separate file

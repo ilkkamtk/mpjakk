@@ -1,8 +1,4 @@
 
-## 5/2018
-
----
-
 ## Media Player
 
 ### Task: Create page for viewing single media files

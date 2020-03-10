@@ -2,8 +2,6 @@ class: center, middle
 
 # AJAX + state
 
-## 1/2019
-
 ---
 
 Study [React crash course](https://www.youtube.com/watch?v=sBws8MSXN7A) from 1:25:55 to 1:38:23

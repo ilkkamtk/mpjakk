@@ -2,8 +2,6 @@ class: center, middle
 
 # Toolchain
 
-## 1/2019
-
 ---
 
 # Contents

@@ -1,7 +1,5 @@
 # Login, Register
 
-## 2/2019
-
 # Login
 
 1. Install [React Develper Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) to Chrome

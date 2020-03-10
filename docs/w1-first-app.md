@@ -2,39 +2,39 @@ class: center, middle
 
 # WBMA, First App
 
-## 1/2019
-
 ---
 # Exercise 1: Setup your toolchain and a new React project
 
-Study [React crash course](https://www.youtube.com/watch?v=sBws8MSXN7A) from 0:00 to 39:52
+Study [Learn React JS ](https://www.youtube.com/watch?v=DLX62G4lc44&feature=youtu.be) from 0:00 to 1:58:15
+   - especially 'Mapping Components'
 
 ### Exercise
 
 **a.**
 
-Check: [Create React App](https://github.com/facebook/create-react-app)
+Study: [Create React App](https://github.com/facebook/create-react-app)
 
 1. If needed, install code editor (+ extensions), git, npm
 1. Use the `create-react-app` cli tool to generate an app skeleton `npx create-react-app my-app`
 1. Test that app works; run it and open in browser
    - `cd my-app`
-   - `yarn start`
+   - `npm start`
 1. Create a remote git repository and push your app there
 
 **b.**  
-1. Install ESlint to your project `yarn add -D eslint@5.12.0 eslint-plugin-react eslint-config-google`
-1. Initialize ESlint: `yarn eslint --init` or `node eslint --init` or `./node_modules/.bin/eslint --init` or `node node_modules\eslint\bin\eslint.js --init`
+1. Install ESlint to your project `npm i -D eslint eslint-plugin-react`
+1. Initialize ESlint: `npm eslint --init` or `node eslint --init` or `./node_modules/.bin/eslint --init` or `node node_modules\eslint\bin\eslint.js --init`
     * Choose:
         1. To check syntax, find problems, and enforce code style
         1. JavaScript modules (import/export)
-        1. React 
+        1. React
+        1. N
         1. Browser
         1. Use a popular style guide
         1. Google
         1. JavaScript
-        1. n (because already installed)
-1. Enable ESLint in your WebStrom project
+        1. Y
+1. Enable ESLint in your WebStrom project (google for VSCode)
    - [Instructions](https://www.jetbrains.com/help/webstorm/eslint.html)
 1. Modify .eslintrc.js:
    ```JavaScript
@@ -93,12 +93,13 @@ Check: [Create React App](https://github.com/facebook/create-react-app)
       },
     };
    ```
-1. If you want to lint a certain file: `yarn eslint src/App.js` or `./node_modules/.bin/eslint src/App.js`.
-1. You can correct code automatically with ctr-alt-l (remember to choose Google style form settings(preferences)/editor/code style/javascript first)
+
+1. If you want to lint a certain file: `npm eslint src/App.js` or `./node_modules/.bin/eslint src/App.js`.
+1. Right click somewhere over .eslint.rc, choose 'Apply ESlint Code Style Rules'. Then you can correct code automatically with ctr-alt-l
 
 **c.**
 
-1. Develop your app further. Add a `<table>` to the app skeleton so that the layout is similar to this: 
+1. Develop your app further. Add a `<table>` etc. (and also css)  to the app skeleton so that the layout is similar to this: 
 
     ![View 1](./images/app1.png)
 
@@ -106,32 +107,31 @@ Check: [Create React App](https://github.com/facebook/create-react-app)
 1. Example html:
     ```html
     <table>
-        <tbody>
+       <tbody>
            <tr>
                <td>
-                   <img src="http://placekitten.com/160/160" alt="Title">
+                   <img src="http://placekitten.com/160/160" alt="Title" />
                 </td>
                <td>
                    <h3>Title</h3>
                    <p>Lorem ipsum dolor sit amet...</p>
                </td>
                <td>
-                   <a href="#">View</a>
-                </td>
-             </tr>
-        </tbody> 
+                   <a href="http://">View</a>
+               </td>
+           </tr>
+           <tr> etc...</tr>
+       </tbody>
     </table>
-
     ```
 
 **d.**
 
 1. Develop your app further. Make the table dynamically by using this array:
     ```javascript
-    // add to App.js
+    // add to App.js after imports
       
-    state = {
-        picArray: [
+    const picArray = [
           {
             'title': 'Title 1',
             'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sodales enim eget leo condimentum vulputate. Sed lacinia consectetur fermentum. Vestibulum lobortis purus id nisi mattis posuere. Praesent sagittis justo quis nibh ullamcorper, eget elementum lorem consectetur. Pellentesque eu consequat justo, eu sodales eros.',
@@ -157,25 +157,28 @@ Check: [Create React App](https://github.com/facebook/create-react-app)
             },
             'filename': 'http://placekitten.com/2039/1920',
           },
-        ],
-      };
+        ];
 
     ```
 
-1. Create components for table, tbody and tr.
+1. Create components for table and tr.
+    * name them as CatTable and CatRow
     * Hierarchy:
     ```text
     App
-       -table
-           -tbody
-               -tr
-               -tr
-               ...
- 
+       -CatTable
+           -CatRow 
     ```
-    * you can put each comoponent (table, tbody, tr) to one file or you can make own file for each component 
-    * Pass picArray as props from App to table to tbody.
-    * Iterate picArray in tbody to create multiple tr components
+    * you can put each comoponent (CatTable, CatRow) to one file or you can make own file for each component 
+    * Pass picArray as props from App to CatTable.
+       * ESlint wants you to use [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html)
+    * Iterate picArray in CatTable to create multiple CatRow components
+       * picArray does not have id`s so you can use array.map's index parameter indstead:
+       ```jsx harmony
+        array.map((item, index) => {
+          return <CatRow key={index} someProp={item} />
+        });
+        ``` 
     
 1. Develop your app further. Open 'filename' image when `<a>` is clicked.
 1. (Optional) Develop your app further. Add more CSS. For example open 'filename' image to your self made modal.
@@ -194,7 +197,7 @@ Check: [Create React App](https://github.com/facebook/create-react-app)
     ```json
      "homepage": "."
     ```
-1. Run `yarn build` or `npm run build`
+1. Run `npm build` or `npm run build`
 1. Set deployment settings in WebStorm:
     ![Build conf0](./images/build_conf0.png)
     ![Build conf1](./images/build_conf1.png)

@@ -2,8 +2,6 @@ class: center, middle
 
 # WBMA, Forms
 
-## 3/2019
-
 ---
 
 # Forms

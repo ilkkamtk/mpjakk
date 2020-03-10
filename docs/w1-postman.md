@@ -2,8 +2,6 @@ class: center, middle
 
 # Using Postman to explore APIs
 
-## 1/2019
-
 ---
 
 # Task 1: Play with the Postman
