@@ -4,16 +4,33 @@ class: center, middle
 
 ---
 
-Study [React crash course](https://www.youtube.com/watch?v=sBws8MSXN7A) from 1:25:55 to 1:38:23
+Study [Understanding and handling API requests](https://www.youtube.com/watch?v=2N9iqkWfjC8&list=PLDIXF8nb0VG1v4S-smVy7GV0MHsJ3PJiL&index=7) and [Using Hooks](https://www.youtube.com/watch?v=rEFYriigJ5A&list=PLDIXF8nb0VG1v4S-smVy7GV0MHsJ3PJiL&index=9)
+
+Study [State Hook](https://reactjs.org/docs/hooks-state.html), [Effect Hook](https://reactjs.org/docs/hooks-effect.html) and this article
 
 # Fetching data with AJAX, Task A
 
 1. Continue last exercise. Create a new branch `http-a` with git and checkout it (`git checkout -b http-a`).
+1. Remove picArray from App.js. Also from `<CatTable>` and CatTable.js' props.
 1. Save [test.json](./assets/test.json) into 'public' folder of your project.
-1. In App.js, use [fetch](https://ilkkamtk.github.io/SSSF-course/Slides/JS%20recap/W1-2-JavaScript-cheat.html) or axios to load test.json
-    - fetch is used in the examples
-1. First log the data using `console.log()`
-1. Save the data to state and then print the data to the table made in last exercise
+1. In CatTable.js, use [fetch](https://ilkkamtk.github.io/SSSF-course/Slides/JS%20recap/W1-2-JavaScript-cheat.html) to load test.json
+    - Add the new code to CatTable function:
+    ```javascript
+    let picArray = [];
+     const loadMedia = async () => {
+       const response = await fetch('test.json');
+       const json = await response.json();
+       console.log(json);
+     };
+   
+     picArray = loadMedia();
+    ```
+1. Why is the resulted page in your browser empty?
+1. Save the loaded data to state and try to get the image list back.
+   - convert `let picArray...` to state with `useState` -hook
+   - instead of `picArray = loadMedia()` set the value of `picArray` state to `json` 
+   - what do you see in the console?
+1. Prevent infinite loop with [useEffect](https://www.robinwieruch.de/react-hooks-fetch-data).
 1. git add, commit & push to remote repository
 1. Deploy project to your public_html 
 
