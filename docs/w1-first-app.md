@@ -1,5 +1,3 @@
-class: center, middle
-
 # WBMA, First App
 
 ---
@@ -20,6 +18,31 @@ Study: [Create React App](https://github.com/facebook/create-react-app)
    - `cd my-app`
    - `npm start`
 1. Create a remote git repository and push your app there
+   - If you want to make public repository you can use GitHub
+   - If you want to make private reposistory (only for metropolia users) use gitlab.metropolia.fi
+   - After creating the repository initialize git and set up remote:
+   ```text
+   #If you use GitHub:
+   
+   git init
+   git add .
+   git commit -m "first commit"
+   git remote add origin https://copy.address.here.git
+   git push -u origin master
+   
+   #If you use GitLab:
+   
+   git config --global user.name "username"
+   git config --global user.email "your.email@metropolia.fi"
+   
+   git init
+   git remote add origin git@gitlab.metropolia.fi:username/nameOfTheRepo.git
+   git add .
+   git commit -m "Initial commit"
+   git push -u origin master
+   ```
+   
+   
 
 **b.**  
 1. Install ESlint to your project `npm i -D eslint eslint-plugin-react`
@@ -31,11 +54,12 @@ Study: [Create React App](https://github.com/facebook/create-react-app)
         1. N
         1. Browser
         1. Use a popular style guide
-        1. Google
+        1. Google (or AirBnb if you prefer that)
         1. JavaScript
         1. Y
-1. Enable ESLint in your WebStrom project (google for VSCode)
+1. Enable ESLint in your WebStrom project (google instructions for VSCode)
    - [Instructions](https://www.jetbrains.com/help/webstorm/eslint.html)
+      - [Importing code style](https://www.jetbrains.com/help/webstorm/eslint.html#ws_js_linters_eslint_import_code_style_from_eslint) is the most interesting part
 1. Modify .eslintrc.js:
    ```JavaScript
     module.exports = {
@@ -203,3 +227,13 @@ Study: [Create React App](https://github.com/facebook/create-react-app)
     ![Build conf1](./images/build_conf1.png)
     ![Build conf2](./images/build_conf2.png)
 1. Move build folder to your public_html
+1. Test your app: `http://users.metropolia.fi/~username/somefolder`
+1. Modify README.md. Change the link in `Open [http://localhost:3000](http://localhost:3000) to view it in the browser.` to point to the above link.
+1. Add, commit and push to git
+   ```text
+   git add .
+   git commit -m 'First app'
+   git push
+   ```
+1. Make sure the link works in Github/GitLab
+1. Submit to Oma
