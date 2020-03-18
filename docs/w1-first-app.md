@@ -207,7 +207,6 @@ Study: [Create React App](https://github.com/facebook/create-react-app)
 1. Develop your app further. Open 'filename' image when `<a>` is clicked.
 1. (Optional) Develop your app further. Add more CSS. For example open 'filename' image to your self made modal.
 1. git add, commit & push to remote repository
-    * git checkout -b 'oksan-nimi'
     * git add .
     * git commit -m 'viesti'
     * git push
