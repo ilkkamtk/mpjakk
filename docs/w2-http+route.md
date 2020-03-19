@@ -2,7 +2,7 @@
 
 ---
 
-# AJAX 2, Move reusable functions to a separate file
+# AJAX 2, Custom hooks
 
 1. Continue last exercise. Create a new branch with git.
 1. Study [custom hooks](https://reactjs.org/docs/hooks-custom.html) and [this article](https://medium.com/@cwlsn/how-to-fetch-data-with-react-hooks-in-a-minute-e0f9a15a44d6) about using hooks to load data.
