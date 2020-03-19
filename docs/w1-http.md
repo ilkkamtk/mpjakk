@@ -11,10 +11,10 @@ Study [State Hook](https://reactjs.org/docs/hooks-state.html), [Effect Hook](htt
 # Fetching data with AJAX, Task A
 
 1. Continue last exercise. Create a new branch `http-a` with git and checkout it (`git checkout -b http-a`).
-1. Remove picArray from App.js. Also from `<CatTable>` and CatTable.js' props.
+1. Remove picArray from App.js. Also from `<MediaTable>` and MediaTable.js' props.
 1. Save [test.json](./assets/test.json) into 'public' folder of your project.
-1. In CatTable.js, use [fetch](https://ilkkamtk.github.io/SSSF-course/Slides/JS%20recap/W1-2-JavaScript-cheat.html) to load test.json
-    - Add the new code to CatTable function:
+1. In MediaTable.js, use [fetch](https://ilkkamtk.github.io/SSSF-course/Slides/JS%20recap/W1-2-JavaScript-cheat.html) to load test.json
+    - Add the new code to MediaTable function:
     ```javascript
     let picArray = [];
      const loadMedia = async () => {
@@ -23,12 +23,12 @@ Study [State Hook](https://reactjs.org/docs/hooks-state.html), [Effect Hook](htt
        console.log(json);
      };
    
-     picArray = loadMedia();
+     loadMedia();
     ```
 1. Why is the resulted page in your browser empty?
 1. Save the loaded data to state and try to get the image list back.
    - convert `let picArray...` to state with `useState` -hook
-   - instead of `picArray = loadMedia()` set the value of `picArray` state to `json` 
+   - set the value of `picArray` state to `json` 
    - what do you see in the console?
 1. Prevent infinite loop with [useEffect](https://www.robinwieruch.de/react-hooks-fetch-data).
 1. git add, commit & push to remote repository

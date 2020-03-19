@@ -5,26 +5,38 @@
 # AJAX 2, Move reusable functions to a separate file
 
 1. Continue last exercise. Create a new branch with git.
-1. Create new folder 'utils' to 'src' folder
-1. In the 'utils' folder create a new file 'MediaAPI.js'
-1. In 'MediaAPI.js' make function getAllMedia and [export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export) it.
-    - getAllMedia should fetch all media files and their thumbnails from MediaAPI (just like last exercise)
-    * example: 
+1. Study [custom hooks](https://reactjs.org/docs/hooks-custom.html) and [this article](https://medium.com/@cwlsn/how-to-fetch-data-with-react-hooks-in-a-minute-e0f9a15a44d6) about using hooks to load data.
+1. Create new folder 'hooks' to 'src' folder
+1. In the 'hooks' folder create a new file 'MediaHooks.js'
+1. In 'MediaHooks.js' make function useAllMedia and [export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export) it.
+    - use 'hooks.js' in the article above as an example
+       - rename useFetch(url) to useAllMedia
+       - fetchUrl should behave like loadMedia function from previous task
+       - you can remove the loading state. Instead of `return [data, loading]` you can just `return data`; 
+    - useAllMedia should fetch all media files and their thumbnails from MediaAPI (just like last exercise)
+    - modify MediaTable.js to use 'useAllMedia' function:
     ```javascript
     ...
-    const getAllMedia = () => {    
-     return fetch(apiUrl).then(param => {
-     ...then(someParam => {
-           return Promise.all(someParam.map(item => {
-             return fetch(...
-             ...
-       }
-    }
+   import {useAllMedia} from '../hooks/ApiHooks';
+   
+   const MediaTable = () => {
+     const [picArray, loading] = useAllMedia();
+   
+     console.log(picArray);
+     console.log(loading);
+   
+     return (
+       <table>
+         <tbody>
+           {
+             picArray.map((file, index) => <MediaRow file={file} key={index}/>)
+           }
+         </tbody>
+       </table>
+     );
+   };
     ...
-    export {getAllMedia}
     ```
-1. In App.js use getAllMedia in componentDidMount-hook to add files to state and display the data in table the same way as last exercise.
-    - when using webStorm MediaAPI.js should be auto imported. If not, import it manually.
 
 # Routing 
 

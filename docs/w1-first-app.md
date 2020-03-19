@@ -186,21 +186,21 @@ Study: [Create React App](https://github.com/facebook/create-react-app)
     ```
 
 1. Create components for table and tr.
-    * name them as CatTable and CatRow
+    * name them as MediaTable and MediaRow
     * Hierarchy:
     ```text
     App
-       -CatTable
-           -CatRow 
+       -MediaTable
+           -MediaRow 
     ```
-    * you can put each comoponent (CatTable, CatRow) to one file or you can make own file for each component 
-    * Pass picArray as props from App to CatTable.
+    * you can put each comoponent (MediaTable, MediaRow) to one file or you can make own file for each component 
+    * Pass picArray as props from App to MediaTable.
        * ESlint wants you to use [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html)
-    * Iterate picArray in CatTable to create multiple CatRow components
+    * Iterate picArray in MediaTable to create multiple MediaRow components
        * picArray does not have id`s so you can use array.map's index parameter indstead:
        ```jsx harmony
         array.map((item, index) => {
-          return <CatRow key={index} someProp={item} />
+          return <MediaRow key={index} someProp={item} />
         });
         ``` 
     
