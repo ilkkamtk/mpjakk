@@ -2,28 +2,29 @@
 
 # Login
 
+1. Study [useState with forms](https://www.youtube.com/watch?v=R7T5GQLxRD4)
 1. Install [React Develper Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) to Chrome
 1. Continue last exercise. Create a new branch with git.
 1. Create 'Login.js' and 'Logout.js' to 'views'
-    * This will be the login and register page
-    * Make it to be a class component
+    * Login.js will be the login and register page
+    * Add the usual imports, component function and export
     * Add two forms:
         * Login form with username and password fields and submit button
         * Register form with username, password, email and full name fields and submit button
         * Add local state to Login.js
         ```javascript
-        state = {
+        const [user, setUser] = useState({
             username: '',
             password: '',
             email: '',
             full_name: '',
-          };
+          });
         ````
     * When login or register form is submitted, add values from corresponding form fields to local state. This way you can use them to login or register functionalities. Example:
     ```jsx harmony
     <input type="text" name="username" placeholder="username"
-                     value={this.state.username}
-                     onChange={this.handleInputChange}/>
+                     value={user.username}
+                     onChange={handleInputChange}/>
     ```
     ```javascript
     handleInputChange = (evt) => {
@@ -33,16 +34,19 @@
     
        console.log(value, name);
     
-       this.setState({
-         [name]: value,
+       setUser((user) => {
+         return {
+                 ...user,
+                 [name]: value,
+                };
        });
      };
     ```
-    * Change routing so that Login is shown first instead of Home
+    * Change routing so that Login is the root ("/") instead of Home
     
 
-1. In MediaApi.js create methods 'register', 'login' and 'checkIfUserNameExists' with corresponding functionalities
-    * Login.js: call MediaApi.js's functions to login user and save userdata from the API to App.js's state
+1. In APiHooks.js create methods 'useRegister', 'useLogin' and 'useIfUserExists' with corresponding functionalities
+    * Login.js: call APiHooks.js's functions to login user and save user data from the API to context
         * when logged in, user is redirected to 'Home'
         * display user's info (username, fullname and email) in Profile.js
         * if user has already logged in, redirect to 'Home' (autoredirect)
