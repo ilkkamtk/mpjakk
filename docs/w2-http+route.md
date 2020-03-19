@@ -137,10 +137,7 @@ Study [React Router Tutorial](https://www.youtube.com/watch?v=Law7wfdg_ls)
     // when navigating to single view, you need to send id parameter to define which media to show
     <Route path="/example/:id" component={Example} />
     ```
-1. To make links work also in subfolders when building add basename attribute to Route:
-    ```jsx harmony
-    <Router basename='/~username/foldername'>
-    ```
+   
 ## Show single file & local state
   
 1. In 'ApiHooks.js' make function useSingleMedia and [export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export) it.
@@ -162,6 +159,13 @@ Study [React Router Tutorial](https://www.youtube.com/watch?v=Law7wfdg_ls)
 
 1. Study [react-router-dom url parameters](https://tylermcginnis.com/react-router-url-parameters/) to get file_id to Single.js
 1. In Single.js receive the file_id parameter and save the result of useSingleMedia to variable 'file' to display the title in `<h1>` element and file in `<img>` element.
+1. To make links work also on remote server after building, add environment variables and basename attribute to Route:
+   - add `.env` to project root. Content: `PUBLIC_URL='/~username/foldername'`
+   - add `.env.dvelopment` to project root. Content: `PUBLIC_URL='/'`
+   - add to App.js:
+    ```jsx harmony
+    <Router basename={process.env.PUBLIC_URL}>
+    ```
 1. git add, commit & push to remote repository
 1. Deploy project to your public_html 
 
