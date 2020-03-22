@@ -43,28 +43,19 @@ class: center, middle
      ```json
            { 
            ...
-              "description": "[d]Nice dog[/d][f]{\"brightness\":131,\"contrast\":110,\"warmth\":10,\"saturation\":90}[/f]",
+              "description": {
+                  "desc": "Some text",
+                  "filters": {
+                     "brightness":131,
+                     "contrast":110,
+                     "warmth":10,
+                     "saturation":90
+                   }",
+               },
            ...
            }
      ```
-    * You can extract filters later like this:
-    ```javascript
-    const getFilters = (value) => {
-        const pattern = '\\[f\\](.*?)\\[\\/f\\]';
-            const re = new RegExp(pattern);
-            // console.log(re.exec(value));
-            try {
-              return JSON.parse(re.exec(value)[1]);
-            } catch (e) {
-              return {
-                brightness: 100,
-                contrast: 100,
-                warmth: 0,
-                saturation: 100,
-              };
-            }
-    }
-   ```
+    * You can extract description and filters later with JSON.parse.
 1. Upload button should be activated only when the form is correctly filled
     - Title is required and minimun length is ?
     - Description is optional but minimun length is ?
