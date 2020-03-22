@@ -68,7 +68,7 @@
      };
    ```
     
-1. In APiHooks.js create functions 'register', 'login' and 'checkUserExists' with corresponding functionalities. Log the results of API fetches to console at this point.
+1. In APiHooks.js create functions 'register', 'login' and 'checkUserAvailable' with corresponding functionalities. Log the results of API fetches to console at this point.
     * Example 'register' function:
     ```javascript
     const register = async (inputs) => {
@@ -97,8 +97,50 @@
     * Logout.js: logout (clear localstorage, redirect to Home)
 1. Study [conditional rendering](https://reactjs.org/docs/conditional-rendering.html)
     * when user is logged in, show Profile and Logout links in Nav. When user is logged out, hide Profile and Logout and show Login.
+    * since updating the DOM requires a state change, user data needs to be saved into a state instead of localStorage. But which state?
+    * save user data with [ContextAPI](https://upmostly.com/tutorials/how-to-use-the-usecontext-hook-in-react) instead of localStroage (token is always stored to localStorage). With Context API you can create a global state which can be accessed from all components.
+    * create new folder 'contexts' to 'src'. Create 'MediaContext.js' to 'contexts':
+    ```javascript
+    import React, {useState} from 'react';
+    import PropTypes from 'prop-types';
+    
+    const MediaContext = React.createContext();
+    
+    const MediaProvider = ({children}) => {
+      const [user, setUser] = useState(null);
+      return (
+        <MediaContext.Provider value={[user, setUser]}>
+          {children}
+        </MediaContext.Provider>
+      );
+    };
+    
+    MediaProvider.propTypes = {
+      children: PropTypes.node,
+    };
+    
+    
+    export {MediaContext, MediaProvider};
 
-1. Extra: Save user data with [ContextAPI](https://upmostly.com/tutorials/how-to-use-the-usecontext-hook-in-react) instead of localStroage (token is always stored to localStorage)
-
----
-
+    ```
+    * add <MediaProvider> to app.js:
+    ```jsx harmony
+    <Router basename={process.env.PUBLIC_URL}>
+          <MediaProvider>
+            <Nav/>
+            <Switch>
+              <Route path="/" exact component={Login}/>
+              <Route path="/home" component={Home}/>
+              <Route path="/profile" component={Profile}/>
+              <Route path={'/logout'} component={Logout}/>
+              <Route path="/single/:id" component={Single}/>
+            </Switch>
+          </MediaProvider>
+        </Router>
+    ```
+   * save user data to context:
+   ```javascript
+   const [user, setUser] = useContext(MediaContext);
+   setUser(userdataFromApi); 
+   ```
+1. Add and commit changes to git, push to Github/GItLab. Build and upload to users.metropolia.fi
