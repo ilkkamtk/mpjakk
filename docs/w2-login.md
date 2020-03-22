@@ -87,7 +87,7 @@
     * RegisterForm.js: set APiHooks.js's 'register' function as a callback to to 'useSignupForm' and fill the registartion form in your browser. Check the log.
     * LoginForm.js: set APiHooks.js's 'login' function as a callback to to 'useLoginForm' and fill the login form in your browser. Check the log.
 1. Add the final functionalities:
-    * when logging in, save user data to [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage). Also redirect to 'Home'
+    * when logging in, save user data to [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage). Also [redirect](https://tylermcginnis.com/react-router-programmatically-navigate/) to 'Home'
     * display user's info (username, fullname and email) in Profile.js
     * if user has already logged in, redirect to 'Home' (autoredirect)
         * for this, save token to [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) when logging in. Then when the app starts, use [/users/user](http://media.mw.metropolia.fi/wbma/docs/#api-User-GetCurrentUser) endpoint to check if the token is valid
