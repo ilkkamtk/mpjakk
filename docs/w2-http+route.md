@@ -161,7 +161,7 @@ Study [React Router Tutorial](https://www.youtube.com/watch?v=Law7wfdg_ls)
 1. In Single.js receive the file_id parameter and save the result of useSingleMedia to variable 'file' to display the title in `<h1>` element and file in `<img>` element.
 1. To make links work also on remote server after building, add environment variables and basename attribute to Route:
    - add `.env` to project root. Content: `PUBLIC_URL='/~username/foldername'`
-   - add `.env.dvelopment` to project root. Content: `PUBLIC_URL='/'`
+   - add `.env.development` to project root. Content: `PUBLIC_URL='/'`
    - add to App.js:
     ```jsx harmony
     <Router basename={process.env.PUBLIC_URL}>
