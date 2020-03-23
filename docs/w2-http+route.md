@@ -7,7 +7,7 @@
 1. Continue last exercise. Create a new branch with git.
 1. Study [custom hooks](https://reactjs.org/docs/hooks-custom.html) and [this article](https://medium.com/@cwlsn/how-to-fetch-data-with-react-hooks-in-a-minute-e0f9a15a44d6) about using hooks to load data.
 1. Create new folder 'hooks' to 'src' folder
-1. In the 'hooks' folder create a new file 'MediaHooks.js'
+1. In the 'hooks' folder create a new file 'ApiHooks.js'
 1. In 'MediaHooks.js' make function useAllMedia and [export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export) it.
     - use 'hooks.js' in the article above as an example
        - rename useFetch(url) to useAllMedia
