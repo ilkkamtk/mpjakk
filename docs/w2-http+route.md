@@ -75,7 +75,7 @@ Study [React Router Tutorial](https://www.youtube.com/watch?v=Law7wfdg_ls)
     ```jsx harmony
     import React from 'react';
     
-    const Home = (props) => {
+    const Home = () => {
       return (
           <>
             <h1>Home</h1>
@@ -99,7 +99,7 @@ Study [React Router Tutorial](https://www.youtube.com/watch?v=Law7wfdg_ls)
     ```javascript
     import React from 'react';
     
-    const Profile = (props) => {
+    const Profile = () => {
       return (
           <>
             <h1>Profile</h1>
