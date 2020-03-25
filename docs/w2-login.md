@@ -64,7 +64,7 @@
        if (event) {
          event.preventDefault();
        }
-       callback(inputs);
+       callback();
      };
    ```
     
