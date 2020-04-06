@@ -13,7 +13,7 @@ class: center, middle
     - add normal HTML form (don't use Material UI at this point)
     - add input fields for 'title' (type=text), 'description' (textarea) and 'file' (type=file)
     - accept only media files to file input
-    - add title and description to state (like in Login.js)
+    - add title and description to state (like in LoginForm.js)
 1. Add a button to Nav to navigate to UploadPage
 1. When uploading a file to the API, you need to send [FormData](https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects) 
     - in Upload.js create a method which is called by (change) event of the file input element. In the function use `evt.persist()`to keep the original synthetic event. Then use `evt.target.files`-array to get the selected file. Save the file (first item of the array) to state. 
