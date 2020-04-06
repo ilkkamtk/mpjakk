@@ -22,7 +22,7 @@ class: center, middle
     - After image is uploaded redirect to Home
         - wait 2 seconds before going to Home so that thumbnail is ready
         - hide spinner
-        - when back in Home, refresh image table
+        - when back in Home, refresh image table if necessary
     - Add img element to Upload.js to show a preview of the selected media file
         - use [FileReader](https://developer.mozilla.org/en-US/docs/Web/API/FileReader) to add the image to src attribute as dataURL
         - if media is audio or video use some default image
