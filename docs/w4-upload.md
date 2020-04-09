@@ -60,7 +60,7 @@ class: center, middle
     - Title is required and minimun length is ?
     - Description is optional but minimun length is ?
     - Media file of correct type (image/video/audio) is required
-1. Add reset button for clearing the whole form and image preview
+1. Add back button to Single, Upload and Profile
     
 1. If you have time, try to recreate [Instagram's Juno filter](https://tricky-photoshop.com/how-to-create-instagram-juno-effect-in-photoshop/)
     - instead of sepia filter, you need to create a [SVG-filter](https://css-tricks.com/gooey-effect/) to do the warming filter
