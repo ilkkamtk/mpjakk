@@ -5,7 +5,6 @@
 
 1. Continue the previous exercise. Create a new git branch for these tasks.
 1. Modify 'Single.js'. Features:
-    - get a single file from API
     - depending on file type use `<img>`, `<video>` or `<audio>` to show/play media file
         - <http://www.w3schools.com/tags/tag_video.asp>
         - <http://www.w3schools.com/tags/tag_audio.asp>
