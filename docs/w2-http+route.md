@@ -168,7 +168,7 @@ Study [React Router Tutorial](https://www.youtube.com/watch?v=Law7wfdg_ls)
     ```
 1. git add, commit & push to remote repository
 1. Deploy project to your public_html
-1. You will get 'Not found' error when you refresh e.g. `http://users.metropolia.fi/~username/foldername/home`. To fix this, add `.htaccess` to your server to the same folder where you have the built index.html:
+1. You will get 'Not found' error when you refresh e.g. `http://users.metropolia.fi/~username/foldername/home`. To fix this, add `.htaccess` to your server to the same folder where you have `index.html` of your app:
    ```text
    RewriteEngine On
    RewriteCond %{REQUEST_FILENAME} !-f
