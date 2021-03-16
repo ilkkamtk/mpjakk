@@ -45,7 +45,7 @@ Search and install:
 
 - Prettier
 - EditorConfig for VS Code
-- Auto Import
+- Auto Import or Auto Import - ES6, TS, JSX, TSX
 - ESLint
 - JavaScript (ES6) Code Snippets
 - ES7 React/Redux/GraphQL/React-Native snippets
