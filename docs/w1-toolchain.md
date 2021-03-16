@@ -86,7 +86,7 @@ Create React App generates a .gitignore file automatically. Add .idea manually.
 
 #### OS X no sudo
 
-- [instructions](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md)
+- [instructions](https://johnpapa.net/node-and-npm-without-sudo/)
 
 #### NPM Alternative
 
