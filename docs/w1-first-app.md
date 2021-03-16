@@ -3,8 +3,7 @@
 ---
 # Exercise 1: Setup your toolchain and a new React project
 
-Study [Learn React JS ](https://www.youtube.com/watch?v=DLX62G4lc44&feature=youtu.be) from 0:00 to 1:58:15
-   - especially 'Mapping Components'
+Study [Learn React JS ](https://www.youtube.com/watch?v=w7ejDZ8SWv8)
 
 ### Exercise
 
