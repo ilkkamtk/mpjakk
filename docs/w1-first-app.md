@@ -62,64 +62,85 @@ Study: [Create React App](https://github.com/facebook/create-react-app)
       - [Importing code style](https://www.jetbrains.com/help/webstorm/eslint.html#ws_js_linters_eslint_import_code_style_from_eslint) is the most interesting part
 1. Modify .eslintrc.js:
    ```JavaScript
-    module.exports = {
-      'parser': 'babel-eslint',
-      'env': {
-        'browser': true,
-        'es2021': true,
-      },
-      'extends': [
-        'google',
-        'eslint:recommended',
-        'plugin:react/recommended',
-      ],
-      'globals': {
-        'Atomics': 'readonly',
-        'SharedArrayBuffer': 'readonly',
-      },
-      'parserOptions': {
-        'ecmaFeatures': {
-          'jsx': true,
-        },
-        'ecmaVersion': 2018,
-        'sourceType': 'module',
-      },
-      'plugins': [
-        'react',
-      ],
-      'rules': {
-        'react/jsx-uses-react': 'error',
-        'react/jsx-uses-vars': 'error',
-        'no-console': 0,
-      },
-      'settings': {
-        'react': {
-          'createClass': 'createReactClass', // Regex for Component Factory to use,
-                                             // default to "createReactClass"
-          'pragma': 'React',  // Pragma to use, default to "React"
-          'version': 'detect', // React version. "detect" automatically picks the version you have installed.
-                               // You can also use `16.0`, `16.3`, etc, if you want to override the detected value.
-                               // default to latest and warns if missing
-                               // It will default to "detect" in the future
-          'flowVersion': '0.53', // Flow version
-        },
-        'propWrapperFunctions': [
-          // The names of any function used to wrap propTypes, e.g. `forbidExtraProps`. If this isn't set, any propTypes wrapped in a function will be skipped.
-          'forbidExtraProps',
-          {'property': 'freeze', 'object': 'Object'},
-          {'property': 'myFavoriteWrapper'},
-        ],
-        'linkComponents': [
-          // Components used as alternatives to <a> for linking, eg. <Link to={ url } />
-          'Hyperlink',
-          {'name': 'Link', 'linkAttribute': 'to'},
-        ],
-      },
-    };
+    /* eslint-disable max-len */
+   module.exports = {
+     'env': {
+       'browser': true,
+       'es2021': true,
+     },
+     'extends': [
+       'plugin:react/recommended',
+       'google',
+     ],
+     'parserOptions': {
+       'ecmaFeatures': {
+         'jsx': true,
+       },
+       'ecmaVersion': 12,
+       'sourceType': 'module',
+     },
+     'plugins': [
+       'react',
+     ],
+     'rules': {
+       'react/jsx-uses-react': 'error',
+       'react/jsx-uses-vars': 'error',
+       'no-console': 0,
+       'react/react-in-jsx-scope': 'off',
+       'react/jsx-filename-extension': [1, {'extensions': ['.js', '.jsx']}],
+     },
+     'settings': {
+       'react': {
+         'createClass': 'createReactClass', // Regex for Component Factory to use,
+         // default to "createReactClass"
+         'pragma': 'React', // Pragma to use, default to "React"
+         'fragment': 'Fragment', // Fragment to use (may be a property of <pragma>), default to "Fragment"
+         'version': 'detect', // React version. "detect" automatically picks the version you have installed.
+         // You can also use `16.0`, `16.3`, etc, if you want to override the detected value.
+         // default to latest and warns if missing
+         // It will default to "detect" in the future
+         'flowVersion': '0.53', // Flow version
+       },
+       'propWrapperFunctions': [
+         // The names of any function used to wrap propTypes, e.g. `forbidExtraProps`. If this isn't set, any propTypes wrapped in a function will be skipped.
+         'forbidExtraProps',
+         {'property': 'freeze', 'object': 'Object'},
+         {'property': 'myFavoriteWrapper'},
+       ],
+       'linkComponents': [
+         // Components used as alternatives to <a> for linking, eg. <Link to={ url } />
+         'Hyperlink',
+         {'name': 'Link', 'linkAttribute': 'to'},
+       ],
+     },
+   };
    ```
 
-1. If you want to lint a certain file: `npm eslint src/App.js` or `./node_modules/.bin/eslint src/App.js`.
-1. Right click somewhere over .eslint.rc, choose 'Apply ESlint Code Style Rules'. Then you can correct code automatically with ctr-alt-l
+1. Create new file '.editorconfig' and add this content:
+   ```
+   root = true
+
+   [*]
+   indent_style = space
+   indent_size = 2
+   end_of_line = lf
+   charset = utf-8
+   trim_trailing_whitespace = true
+   insert_final_newline = true
+   ```
+1. Right click somewhere over .eslintrc.js, choose 'Apply ESlint Code Style Rules'.
+1. If you are using VSCode, set up Prettier: `Install prettier: npm install --save-dev prettier eslint-plugin-prettier eslint-config-prettier`
+1. If you are using VSCode, create a new file '.prettierrc' and add this content:
+   ```
+   {
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "useTabs": false,
+    "bracketSpacing": false
+   }
+   ```
+1. Enable format on save on [WebStorm](https://www.jetbrains.com/help/webstorm/eslint.html#ws_eslint_configure_run_eslint_on_save) or [VSCode](https://youtu.be/ilCFoEhTyM0) 
 
 **c.**
 
