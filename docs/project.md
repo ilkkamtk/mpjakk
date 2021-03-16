@@ -12,7 +12,7 @@ Create an application utilizing [this](http://media.mw.metropolia.fi/wbma/docs/)
 6. implemented using React *
 7. applying UI guidelines *
 8. responsive frontend *
-9. user feedback (incl. testing)
+9. user feedback (incl. testing) *
 10. applying/extracting metadata (for example EXIF)
 11. user registration and authentication *
 12. use of the introduced toolchain *
