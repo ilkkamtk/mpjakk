@@ -35,7 +35,49 @@ Ultimately, it's your choice. WebStrom/PhpStorm is recommended.
 - wide extension support
 - lightweight, multiplatform support
 - good [docs & instructions](https://code.visualstudio.com/docs/editor/codebasics)
-- choice of many Angular developers
+- choice of many JS developers
+
+#### Install Extensions
+
+Press _ctrl-shift-x_ or click extensions icon on the left panel.
+
+Search and install:
+
+- Prettier
+- EditorConfig for VS Code
+- Auto Import
+- ESLint
+- JavaScript (ES6) Code Snippets
+- ES7 React/Redux/GraphQL/React-Native snippets
+
+Other handy extensions:
+
+- Duplicate file: Add _right-click -> Duplicate file_ action
+
+#### VSCode - Basic Usage
+
+Active **project** is the folder open on the left side panel (_File -> Open folder..._)
+
+Handy keyboard shortcuts (finnish layout, check _File -> Preferences -> Keyboard shortcuts_ for more)
+
+- Multiline comment: _ctrl-'_
+- Delete line: _ctrl-shift-k_
+- Move line(s): _alt-up/down_
+- Copy line(s): _alt-shift-up/down_
+- Auto format code: _alt-shift-f_
+- Open integrated console: _ctrl-ö_
+- Quick find/open files: _ctrl-p_
+- Split editor: _ctrl-§_
+
+#### VSCode - Settings
+
+(Windows users only) Change integrated console to Bash in Windows:
+
+1. Install [Git for Windows](https://git-scm.com/downloads) to default location
+2. Edit vscode settings file (_File -> Preferences -> Settings_) and search for 'terminal'.
+3. Change 'Terminal › External: Windows Exec' value to "C:\\Program Files\\Git\\bin\\bash.exe"
+
+---
 
 #### Other picks
 
