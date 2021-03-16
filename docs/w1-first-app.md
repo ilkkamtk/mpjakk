@@ -66,7 +66,7 @@ Study: [Create React App](https://github.com/facebook/create-react-app)
       'parser': 'babel-eslint',
       'env': {
         'browser': true,
-        'es6': true,
+        'es2021': true,
       },
       'extends': [
         'google',
