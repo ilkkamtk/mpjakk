@@ -4,10 +4,11 @@ class: center, middle
 
 ---
 
-# Task 1: Play with the Postman
+# Task 1: Play with the Postman or Insomnia
 
 1. [Get Postman](https://www.getpostman.com/) and take a look at [docs & tutorials](https://www.getpostman.com/docs/).
-2. Check [Media API docs](http://media.mw.metropolia.fi/wbma/docs/) Base URL for the api endpoints is <http://media.mw.metropolia.fi/wbma> 
+1. or [Get Insomnia](https://insomnia.rest/)
+2. Check [Media API docs](https://media-new.mw.metropolia.fi/wbma/docs/) Base URL for the api endpoints is <http://media.mw.metropolia.fi/wbma> 
 
 Use Postman to:
 

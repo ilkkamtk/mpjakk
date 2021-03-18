@@ -1,6 +1,6 @@
 # Course Project
 
-Create an application utilizing [this](http://media.mw.metropolia.fi/wbma/docs/) back-end service.
+Create an application utilizing [this](https://media-new.mw.metropolia.fi/wbma/docs/) back-end service.
 
 ## Application requirements
 
@@ -21,10 +21,10 @@ starred(*) requirements are mandatory
 
 ## Links
 
-[Media API docs](http://media.mw.metropolia.fi/wbma/docs/)
+[Media API docs](https://media-new.mw.metropolia.fi/wbma/docs/)
 
-API base url: http://media.mw.metropolia.fi/wbma
+API base url: https://media-new.mw.metropolia.fi/wbma
 
-Media files location: http://media.mw.metropolia.fi/wbma/uploads/
+Media files location: https://media-new.mw.metropolia.fi/wbma/uploads/
 
 Tip: Use Postman to test how the API works: [Postman](https://www.getpostman.com/)
