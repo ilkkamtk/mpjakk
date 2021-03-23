@@ -111,7 +111,7 @@ Study [React Router Tutorial](https://www.youtube.com/watch?v=Law7wfdg_ls)
         
    
    const Single = () => {
-     const file = {}; // TODO: fetch single media based on id from path parameter
+     const file = {}; // TODO in the next task: single media from props.location.state
    
      return (
        <React.Fragment>
@@ -121,38 +121,23 @@ Study [React Router Tutorial](https://www.youtube.com/watch?v=Law7wfdg_ls)
      );
    };
    
-   // TODO: add propTypes
+   // TODO in the next task: add propType for location
    
    export default Single;
 
    ```
 1. Study the video above and create routing described in bullet 2.
-    ```jsx harmony
-    // when navigating to single view, you need to send id parameter to define which media to show
-    <Route path="/example/:id" component={Example} />
-    ```
    
 ## Show single file & local state
   
-1. In 'ApiHooks.js' make function useSingleMedia and [export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export) it.
-    - useSingleMedia should fetch one media file from MediaAPI based on id
-    * example: 
-    ```javascript
-    ...
-    const useSingleMedia = (id) => {
-      const [data, setData] = useState([]);
-      // TODO: fetch data from api
-    
-     // TODO: useEffect
-    
-      return data;
-    };
-    ...
+1. In MediaRow.js make the 'view' link to open 'Single' component and send file as a state.
+   - [to: object](https://reactrouter.com/web/api/Link/to-object)
+   - [location](https://reactrouter.com/web/api/location)
+    ```jsx harmony
+    // when navigating to single view, you need to send location state to define which media to show
+    <Link to={{pathname: "/example", state: fileObject}} />
     ```
-1. In MediaRow.js make the 'view' link to open 'Single' component and send file_id as a parameter.
-
-1. Study [react-router-dom url parameters](https://tylermcginnis.com/react-router-url-parameters/) to get file_id to Single.js
-1. In Single.js receive the file_id parameter and save the result of useSingleMedia to variable 'file' to display the title in `<h1>` element and file in `<img>` element.
+1. In Single.js receive state from location prop and save it variable 'file' to display the title in `<h1>` element and file in `<img>` element.
 1. To make links work also on remote server after building, add environment variables and basename attribute to Route:
    - add `.env` to project root. Content: `PUBLIC_URL='/~username/foldername'`
    - add `.env.development` to project root. Content: `PUBLIC_URL='/'`
