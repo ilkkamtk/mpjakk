@@ -73,9 +73,7 @@ Study [React Router Tutorial](https://www.youtube.com/watch?v=Law7wfdg_ls)
     * Home.js will be the component that should show first when the app starts
     * Content for Home.js (note: `<> is shorthand for <React.Fragment>`)
     ```jsx harmony
-    import React from 'react';
-    
-    const Home = () => {
+     const Home = () => {
       return (
           <>
             <h1>Home</h1>
@@ -97,9 +95,7 @@ Study [React Router Tutorial](https://www.youtube.com/watch?v=Law7wfdg_ls)
     * The app should at this point work the same as before
 1. Content for Profile.js:
     ```javascript
-    import React from 'react';
-    
-    const Profile = () => {
+     const Profile = () => {
       return (
           <>
             <h1>Profile</h1>
@@ -111,9 +107,7 @@ Study [React Router Tutorial](https://www.youtube.com/watch?v=Law7wfdg_ls)
     ```
 1. Content for Single.js:
    ```javascript
-   import React from 'react';
-   
-   const mediaUrl = 'http://media.mw.metropolia.fi/wbma/uploads/';
+    const mediaUrl = 'http://media.mw.metropolia.fi/wbma/uploads/';
         
    
    const Single = () => {
