@@ -14,7 +14,6 @@
     * Add the usual imports, component function and export to Login, LoginForm and RegisterForm
     * Login.js:
     ```jsx harmony
-    import React from 'react';
     import LoginForm from '../components/LoginForm';
     import RegisterForm from '../components/RegisterForm';
     
