@@ -123,8 +123,8 @@
               <Route path="/" exact component={Home}/>
               <Route path="/login" component={Login}/>
               <Route path="/profile" component={Profile}/>
-              <Route path={'/logout'} component={Logout}/>
-              <Route path="/single/:id" component={Single}/>
+              <Route path="/logout" component={Logout}/>
+              <Route path="/single" component={Single}/>
             </Switch>
           </MediaProvider>
         </Router>
