@@ -29,8 +29,15 @@ class: center, middle
     - Example:
     
     ![uploadform](images/uploadform.png)
-        
-### Task B: Use CSS filters to adjust the image
+
+### Task B: List files limiting to those uploaded from your own app
+
+1. Come up with an unique identifier for your app. It can be anything. For example _LH345D_.
+1. When uploading add the identifier as a [tag](http://media.mw.metropolia.fi/wbma/docs/#api-Tag-PostTag) to the uploaded file.
+1. Modify useAllMedia() in ApiHooks.js to show only the files which have the identifier tag of your app.
+
+
+### Task C: Use CSS filters to adjust the image
 1. Study [CSS filters](https://css-tricks.com/almanac/properties/f/filter/)
 1. Add [Slider](https://material-ui.com/components/slider/) elements to change brightness, contrast, saturation and sepia CSS filters
     - Read from [this link](https://material-ui.com/lab/about/) about installation.

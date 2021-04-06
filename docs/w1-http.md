@@ -17,13 +17,13 @@ Study [State Hook](https://reactjs.org/docs/hooks-state.html), [Effect Hook](htt
     - Add the new code to MediaTable function:
     ```javascript
     let picArray = [];
-     const loadMedia = async () => {
+     const getMedia = async () => {
        const response = await fetch('test.json');
        const json = await response.json();
        console.log(json);
      };
    
-     loadMedia();
+     getMedia();
     ```
 1. Why is the resulted page in your browser empty?
 1. Save the loaded data to state and try to get the image list back.

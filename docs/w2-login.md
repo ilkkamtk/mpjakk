@@ -8,7 +8,7 @@
 1. Continue last exercise. Create a new branch with git.
 1. Create files:
     * 'Login.js' and 'Logout.js' to 'views' 
-    * 'LoginHooks.js' and 'RegisterHooks.js' to 'hooks' 
+    * 'FormHooks.js' to 'hooks' 
     * 'LoginForm.js' and 'RegisterForm.js' to 'components'
 1. Login.js will hold LoginForm and RegisterForm components
     * Add the usual imports, component function and export to Login, LoginForm and RegisterForm
@@ -30,41 +30,33 @@
    ```
 1. Change routing so that Login is the root ("/") instead of Home. Add also a new route for Home.
 1. Add form to RegisterForm.js with username, password, email and full_name fields and submit button
-    * Use 'Using React Hooks...' article as an example to handle form events. Instead of using 'CustomHooks.js' as filename, use 'RegisterHooks.js'
-       * You need to do one change to useSignUpForm function:
+    * Use 'Using React Hooks...' article as an example to handle form events. Instead of using 'CustomHooks.js' as filename, use 'FormHooks.js' and useForm as the function name instead of useSignUpForm
+       * You need to do changes to useForm function:
         ```javascript
-        // RegisterHooks.js:
-        const [inputs, setInputs] = useState({
-            username: '',
-            password: '',
-            email: '',
-            full_name: '',
-          });
+        // FormHooks.js:
+      const useForm = (callback, initState) => {
+        const [inputs, setInputs] = useState(initState);
         
         const handleSubmit = (event) => {
             if (event) {
               event.preventDefault();
             }
-            callback(inputs);
+            callback();
           };
         ```
-1. Do the same with LoginForm.
-   * Instead of using 'CustomHooks.js' as filename for hooks, use 'LoginHooks.js'
-   * Rename 'useSignUpForm' function in 'LoginHooks.js' to 'useLoginForm'
-   * Make this change:
+1. Then in LoginForm make this change:
    ```javascript
-   // LoginHooks.js:
-   const [inputs, setInputs] = useState({
-       username: '',
-       password: '',
-     });
+   // LoginForm.js:
+   const doLogin = () => {
+     console.log(inputs);
+     // TODO: add login functionalities here
+   };
    
-   const handleSubmit = (event) => {
-       if (event) {
-         event.preventDefault();
-       }
-       callback();
-     };
+   const {inputs, handleInputChange, handleSubmit} = useForm(doLogin, {
+    username: '',
+    password: '',
+   });
+
    ```
     
 1. In APiHooks.js create functions 'register', 'login' and 'checkUserAvailable' with corresponding functionalities. Log the results of API fetches to console at this point.
