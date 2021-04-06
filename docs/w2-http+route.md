@@ -107,9 +107,6 @@ Study [React Router Tutorial](https://www.youtube.com/watch?v=Law7wfdg_ls)
     ```
 1. Content for Single.js:
    ```javascript
-    const mediaUrl = 'http://media.mw.metropolia.fi/wbma/uploads/';
-        
-   
    const Single = () => {
      const file = {}; // TODO in the next task: single media from props.location.state
    
