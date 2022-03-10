@@ -40,11 +40,13 @@ Course content is inside [docs](docs/) folder.
         - Promises, async/await
         - +everything else you want to recap or want to know more about
 1. [React concepts](https://medium.freecodecamp.org/all-the-fundamental-react-js-concepts-jammed-into-this-single-medium-article-c83f9b53eac2)
-1. What is React: https://youtu.be/N3AkSS5hXMA
-1. Learn React in five minutes: https://www.youtube.com/watch?v=MRIMT0xPXFI
-1. If five minutes is not enough: https://youtu.be/w7ejDZ8SWv8
-1. [Online book: React.js Training](https://rangle-io.gitbooks.io/react-training/content/)
-6. [Full stack open](https://fullstackopen.com/)
+   * Fundamental #4 about classes is not that important anymore but still nice to know
+   * Fundamental #7 is implemented a bit differently nowadays, but the idea of states is the same 
+3. What is React: https://youtu.be/N3AkSS5hXMA
+4. Learn React in five minutes: https://www.youtube.com/watch?v=MRIMT0xPXFI
+5. If five minutes is not enough: https://youtu.be/w7ejDZ8SWv8
+6. [Online book: React.js Training](https://rangle-io.gitbooks.io/react-training/content/)
+7. [Full stack open](https://fullstackopen.com/)
 
 ### Other
 
