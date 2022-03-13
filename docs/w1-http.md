@@ -59,34 +59,4 @@ Study [State Hook](https://reactjs.org/docs/hooks-state.html), [Effect Hook](htt
         ```
 5. Save the data to state and then print the data to the table
 6. git add, commit & push to remote repository
-7. Deploy project to your public_html 
-
-## Custom hooks, Task C
-
-1. Create `hooks` folder and add there a new file `ApiHooks.js`.
-2. The idea is to make hooks for each path in the [API](https://media.mw.metropolia.fi/wbma/docs/): login, users, media, etc.
-3. Create a custom hook `useMedia` to ApiHooks.js and move fetch related functionalities from List.js:
-   ```javascript
-   // TODO: add necessary imports
-   const apiUrl = 'http://media.mw.metropolia.fi/wbma/';
-   const useMedia = () => {
-     // TODO: move mediaArray state here
-     // TODO: move loadMedia function here
-     // TODO: move useEffect here
-     return {mediaArray};
-   };
-
-   export {useMedia};
-   ```
-4. Modify MediaTable.js:
-   ```javascript
-   ...
-   const MediaTable = () => {
-     const {mediaArray} = useMedia();
-     return (
-     <table 
-   ...
-   ```
-5. The app should work the same as before
-6. git add, commit & push to remote repository
-7. Deploy project to your public_html 
+7. Deploy project to your public_html

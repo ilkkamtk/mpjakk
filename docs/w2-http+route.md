@@ -3,39 +3,48 @@
 ---
 
 # AJAX 2, Custom hooks
-
 1. Continue last exercise. Create a new branch with git.
-1. Study [custom hooks](https://reactjs.org/docs/hooks-custom.html) and [this article](https://medium.com/@cwlsn/how-to-fetch-data-with-react-hooks-in-a-minute-e0f9a15a44d6) about using hooks to load data.
-1. Create new folder 'hooks' to 'src' folder
-1. In the 'hooks' folder create a new file 'ApiHooks.js'
-1. In 'ApiHooks.js' make function useAllMedia and [export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export) it.
-    - use 'hooks.js' in the article above as an example
-       - rename useFetch(url) to useAllMedia
-       - fetchUrl should behave like loadMedia function from previous task
-       - you can remove the loading state. Instead of `return [data, loading]` you can just `return data`; 
-    - useAllMedia should fetch all media files and their thumbnails from MediaAPI (just like last exercise)
-    - modify MediaTable.js to use 'useAllMedia' function:
-    ```javascript
-    ...
-   import {useAllMedia} from '../hooks/ApiHooks';
-   
-   const MediaTable = () => {
-     const mediaArray = useAllMedia();
-   
-     console.log(mediaArray);
-   
-     return (
-       <table>
-         <tbody>
-           {
-             mediaArray.map((file, index) => <MediaRow file={file} key={index}/>)
-           }
-         </tbody>
-       </table>
-     );
+2. Study [custom hooks](https://reactjs.org/docs/hooks-custom.html) and [this article](https://medium.com/@cwlsn/how-to-fetch-data-with-react-hooks-in-a-minute-e0f9a15a44d6) about using hooks to load data.
+3. Create `hooks` folder and add there a new file `ApiHooks.js`.
+4. The idea is to make hooks for each path in the [API](https://media.mw.metropolia.fi/wbma/docs/): login, users, media, etc.
+5. Create a custom hook `useMedia` to ApiHooks.js and move fetch related functionalities from List.js:
+   ```javascript
+   // TODO: add necessary imports
+   const apiUrl = 'http://media.mw.metropolia.fi/wbma/';
+   const useMedia = () => {
+     // TODO: move mediaArray state here
+     // TODO: move loadMedia function here
+     // TODO: move useEffect here
+     return {mediaArray};
    };
-    ...
-    ```
+
+   export {useMedia};
+   ```
+6. Modify MediaTable.js:
+   ```javascript
+   ...
+    import {useMedia} from '../hooks/ApiHooks';
+   
+    const MediaTable = () => {
+      const {mediaArray} = useAllMedia();
+   
+      console.log(mediaArray);
+   
+      return (
+        <table>
+          <tbody>
+            {
+              mediaArray.map((file, index) => <MediaRow file={file} key={index}/>)
+            }
+          </tbody>
+        </table>
+      );
+    };
+     ...
+     ```
+7. The app should work the same as before
+8. git add, commit & push to remote repository
+9. Deploy project to your public_html
 
 # Routing 
 
