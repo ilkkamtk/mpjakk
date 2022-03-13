@@ -180,7 +180,7 @@ Study: [Create React App](https://github.com/facebook/create-react-app)
     ```javascript
     // add to App.js after imports
       
-    const picArray = [
+    const mediaArray = [
           {
             'title': 'Title 1',
             'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sodales enim eget leo condimentum vulputate. Sed lacinia consectetur fermentum. Vestibulum lobortis purus id nisi mattis posuere. Praesent sagittis justo quis nibh ullamcorper, eget elementum lorem consectetur. Pellentesque eu consequat justo, eu sodales eros.',
@@ -219,10 +219,10 @@ Study: [Create React App](https://github.com/facebook/create-react-app)
            -MediaRow 
     ```
     * you can put each comoponent (MediaTable, MediaRow) to one file or you can make own file for each component 
-    * Pass picArray as props from App to MediaTable.
+    * Pass mediaArray as props from App to MediaTable.
        * ESlint wants you to use [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html)
-    * Iterate picArray in MediaTable to create multiple MediaRow components
-       * picArray does not have id`s so you can use array.map's index parameter indstead:
+    * Iterate mediaArray in MediaTable to create multiple MediaRow components
+       * mediaArray does not have id`s so you can use array.map's index parameter indstead:
        ```jsx harmony
         array.map((item, index) => {
           return <MediaRow key={index} someProp={item} />

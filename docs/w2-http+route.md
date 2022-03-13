@@ -20,15 +20,15 @@
    import {useAllMedia} from '../hooks/ApiHooks';
    
    const MediaTable = () => {
-     const picArray = useAllMedia();
+     const mediaArray = useAllMedia();
    
-     console.log(picArray);
+     console.log(mediaArray);
    
      return (
        <table>
          <tbody>
            {
-             picArray.map((file, index) => <MediaRow file={file} key={index}/>)
+             mediaArray.map((file, index) => <MediaRow file={file} key={index}/>)
            }
          </tbody>
        </table>
