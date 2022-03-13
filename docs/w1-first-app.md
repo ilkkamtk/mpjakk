@@ -27,7 +27,7 @@ Study: [Create React App](https://github.com/facebook/create-react-app)
    git add .
    git commit -m "first commit"
    git remote add origin https://copy.address.here.git
-   git push -u origin master
+   git push -u origin main
    
    #If you use GitLab:
    
@@ -45,7 +45,7 @@ Study: [Create React App](https://github.com/facebook/create-react-app)
 
 **b.**  
 1. Install ESlint to your project `npm i -D eslint eslint-plugin-react`
-1. Initialize ESlint: `npm eslint --init` or `node eslint --init` or `./node_modules/.bin/eslint --init` or `node node_modules\eslint\bin\eslint.js --init`
+2. Initialize ESlint: `npm eslint --init` or `node eslint --init` or `./node_modules/.bin/eslint --init` or `node node_modules\eslint\bin\eslint.js --init`
     * Choose:
         1. To check syntax, find problems, and enforce code style
         1. JavaScript modules (import/export)
@@ -56,10 +56,10 @@ Study: [Create React App](https://github.com/facebook/create-react-app)
         1. Google (or AirBnb if you prefer that)
         1. JavaScript
         1. Y
-1. Enable ESLint in your WebStrom project (google instructions for VSCode)
+3. Enable ESLint in your WebStrom project (google instructions for VSCode)
    - [Instructions](https://www.jetbrains.com/help/webstorm/eslint.html)
       - [Importing code style](https://www.jetbrains.com/help/webstorm/eslint.html#ws_js_linters_eslint_import_code_style_from_eslint) is the most interesting part
-1. Modify .eslintrc.js:
+4. Modify .eslintrc.js:
    ```JavaScript
     /* eslint-disable max-len */
    module.exports = {
@@ -70,16 +70,19 @@ Study: [Create React App](https://github.com/facebook/create-react-app)
      'extends': [
        'plugin:react/recommended',
        'google',
+       'eslint:recommended',
+       'plugin:prettier/recommended', // remove if using WebStorm
      ],
      'parserOptions': {
        'ecmaFeatures': {
          'jsx': true,
        },
-       'ecmaVersion': 12,
+       'ecmaVersion': 13,
        'sourceType': 'module',
      },
      'plugins': [
        'react',
+       'prettier' // remove if using WebStorm
      ],
      'rules': {
        'react/jsx-uses-react': 'error',
@@ -87,6 +90,8 @@ Study: [Create React App](https://github.com/facebook/create-react-app)
        'no-console': 0,
        'react/react-in-jsx-scope': 'off',
        'react/jsx-filename-extension': [1, {'extensions': ['.js', '.jsx']}],
+       'require-jsdoc': 0,
+       'prettier/prettier': 'error', // remove if using WebStorm
      },
      'settings': {
        'react': {
@@ -115,7 +120,7 @@ Study: [Create React App](https://github.com/facebook/create-react-app)
    };
    ```
 
-1. Create new file '.editorconfig' and add this content:
+5. Create new file '.editorconfig' and add this content:
    ```
    root = true
 
@@ -127,19 +132,19 @@ Study: [Create React App](https://github.com/facebook/create-react-app)
    trim_trailing_whitespace = true
    insert_final_newline = true
    ```
-1. Right click somewhere over .eslintrc.js, choose 'Apply ESlint Code Style Rules'.
-1. If you are using VSCode, set up Prettier: `Install prettier: npm install --save-dev prettier eslint-plugin-prettier eslint-config-prettier`
-1. If you are using VSCode, create a new file '.prettierrc' and add this content:
+6. If using VSCode, Install prettier: `npm install --save-dev prettier eslint-plugin-prettier eslint-config-prettier`
+7. If using VSCode, Create new file '.prettierrc' and add this content:
    ```
    {
-    "semi": true,
-    "singleQuote": true,
-    "tabWidth": 2,
-    "useTabs": false,
-    "bracketSpacing": false
+       "semi": true,
+       "singleQuote": true,
+       "tabWidth": 2,
+       "useTabs": false,
+       "bracketSpacing": false
    }
    ```
-1. Enable format on save on [WebStorm](https://www.jetbrains.com/help/webstorm/eslint.html#ws_eslint_configure_run_eslint_on_save) or [VSCode](https://youtu.be/ilCFoEhTyM0) 
+8. If you are using WebStrom, right click somewhere over .eslintrc.js, choose 'Apply ESlint Code Style Rules'.
+11. Enable format on save on [WebStorm](https://www.jetbrains.com/help/webstorm/eslint.html#ws_eslint_configure_run_eslint_on_save) or [VSCode](https://youtu.be/ilCFoEhTyM0) 
 
 **c.**
 
