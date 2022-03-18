@@ -41,9 +41,9 @@ Study [State Hook](https://reactjs.org/docs/hooks-state.html), [Effect Hook](htt
 
 1. Continue last exercise. Create a new git branch `http-b` and use it.
 2. Modify the app so that you fetch the data from the media API instead of test.json
-    - [Documentation](https://media-new.mw.metropolia.fi/wbma/docs/)
-    - base url: https://media-new.mw.metropolia.fi/wbma/
-    - Media files location: http://media-new.mw.metropolia.fi/wbma/uploads/
+    - [Documentation](https://media.mw.metropolia.fi/wbma/docs/)
+    - base url: https://media.mw.metropolia.fi/wbma/
+    - Media files location: http://media.mw.metropolia.fi/wbma/uploads/
 3. Modify loadMedia function to load the data from the '/media' endpoint of the API.
 4. First log the data using ```console.log()```
     - Note that '/media' endpoint doesn't give you thumbnails. You need to do a nested request to '/media/:id' to get also thumbnails.
