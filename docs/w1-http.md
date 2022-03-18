@@ -58,5 +58,8 @@ Study [State Hook](https://reactjs.org/docs/hooks-state.html), [Effect Hook](htt
         }));
         ```
 5. Save the data to state and then print the data to the table
-6. git add, commit & push to remote repository
-7. Deploy project to your public_html
+6. 1. Run `npm build` or `npm run build`
+8. Move build folder to your public_html
+9. Test your app: `http://users.metropolia.fi/~username/somefolder`
+10. Modify README.md. Change the link in `Open [http://localhost:3000](http://localhost:3000) to view it in the browser.` to point to the above link.
+14. git add, commit & push to remote repository
