@@ -50,11 +50,12 @@
 
 Study [React Router Tutorial](https://www.youtube.com/watch?v=Law7wfdg_ls)
 
-1. Install [react-router-dom](https://reacttraining.com/react-router/web/guides/quick-start) with npm
-1. Goal is to make a navigation between three 'pages'
+1. Continue last exercise. Create a new branch 'navigation' with git.
+2. Install [react-router-dom](https://reacttraining.com/react-router/web/guides/quick-start) with npm
+3. Goal is to make a navigation between three 'pages'
     * main menu has two links: 'Home' and 'Profile'
     * Each media file has 'view' link next to it. Clicking that should take to 'Single' and then display the selected media file
-1. Create new component 'Nav.js' (to components folder)
+4. Create new component 'Nav.js' (to components folder)
     * content for Nav.js:
     ```javascript
     import React from 'react';
