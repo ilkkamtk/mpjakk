@@ -141,7 +141,7 @@ Study [React Router Tutorial](https://www.youtube.com/watch?v=UjHT_NKR_gU)
    - [useLocation](https://reactrouter.com/docs/en/v6/api#uselocation)
     ```jsx harmony
     // when navigating to single view, you need to send location state to define which media to show
-    <Link to={{pathname: "/example"}} state={{fileObject}} />
+    <Link to={'/example'} state={{fileObject}} />
     ```
 1. In Single.js receive state from location prop and save it variable 'file' to display the title in `<h1>` element and file in `<img>` element.
 1. To make links work also on remote server after building, add environment variables and basename attribute to Route:
