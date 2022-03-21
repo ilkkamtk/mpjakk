@@ -123,7 +123,7 @@ Study [React Router Tutorial](https://www.youtube.com/watch?v=Law7wfdg_ls)
      return (
        <React.Fragment>
          <h1>{file.title}</h1>
-         <img src={mediaUrl + file.filename} alt={file.title}/>
+         <img src={baseUrl + file.filename} alt={file.title}/>
        </React.Fragment>
      );
    };
