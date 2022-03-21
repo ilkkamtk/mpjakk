@@ -138,11 +138,10 @@ Study [React Router Tutorial](https://www.youtube.com/watch?v=UjHT_NKR_gU)
 ## Show single file & local state
   
 1. In MediaRow.js make the 'view' link to open 'Single' component and send file as a state.
-   - [to: object](https://reactrouter.com/web/api/Link/to-object)
-   - [location](https://reactrouter.com/web/api/location)
+   - [useLocation](https://reactrouter.com/docs/en/v6/api#uselocation)
     ```jsx harmony
     // when navigating to single view, you need to send location state to define which media to show
-    <Link to={{pathname: "/example", state: fileObject}} />
+    <Link to={{pathname: "/example"}} state={{fileObject}} />
     ```
 1. In Single.js receive state from location prop and save it variable 'file' to display the title in `<h1>` element and file in `<img>` element.
 1. To make links work also on remote server after building, add environment variables and basename attribute to Route:
