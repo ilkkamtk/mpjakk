@@ -114,7 +114,7 @@
     export {MediaContext, MediaProvider};
 
     ```
-    * add <MediaProvider> to app.js:
+    * add `<MediaProvider>` to app.js:
     ```jsx harmony
     <Router basename={process.env.PUBLIC_URL}>
           <MediaProvider>
