@@ -60,9 +60,9 @@
    ```
     
 1. In APiHooks.js create new hooks 'useLogin' and 'useUser'. Add 'postLogin' to 'useLogin' 'postUser' and 'getUser' to 'useUser'. Add corresponding functionalities to 'postLogin' and 'postUser'. Log the results of API fetches to console at this point.
-    * Example 'posetUser' function:
+    * Example 'postUser' function:
     ```javascript
-    const register = async (inputs) => {
+    const postUser = async (inputs) => {
       const fetchOptions = {
         method: 'POST',
         headers: {
