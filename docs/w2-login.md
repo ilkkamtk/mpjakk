@@ -82,9 +82,7 @@
     * display user's info (username, fullname and email) in Profile.js. Add this functionality to getUser function in useUser hook. In the API this is [/users/user](http://media.mw.metropolia.fi/wbma/docs/#api-User-GetCurrentUser) endpoint
     * if user has already logged in, redirect to 'Home' (autoredirect)
         * for this, save token to [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) when logging in. Then when the app starts, use 'getUser' to check if the token is valid. 
-    * when registering  
-        * login automatically after succesful registration
-        * check if username already exists before trying to register by using [/users/username/:username](https://media.mw.metropolia.fi/wbma/docs/#api-User-CheckUserName) endpoint
+    * when registering check if username already exists before trying to register by using [/users/username/:username](https://media.mw.metropolia.fi/wbma/docs/#api-User-CheckUserName) endpoint
     * Logout.js: logout (clear localstorage, redirect to Home)
 1. Study [conditional rendering](https://reactjs.org/docs/conditional-rendering.html)
     * when user is logged in, show Profile and Logout links in Nav. When user is logged out, hide Profile and Logout and show Login.
