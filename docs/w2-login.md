@@ -86,8 +86,8 @@
     * Logout.js: logout (clear localstorage, redirect to Home)
 1. Study [conditional rendering](https://reactjs.org/docs/conditional-rendering.html)
     * when user is logged in, show Profile and Logout links in Nav. When user is logged out, hide Profile and Logout and show Login.
-    * since updating the DOM requires a state change, user data needs to be saved into a state instead of localStorage. But which state?
-    * save user data with [ContextAPI](https://upmostly.com/tutorials/how-to-use-the-usecontext-hook-in-react) instead of localStroage (token is always stored to localStorage). With Context API you can create a global state which can be accessed from all components.
+      * since updating the DOM requires a state change, user data needs to be saved into a state instead of localStorage. But which state?
+      * save user data with [ContextAPI](https://upmostly.com/tutorials/how-to-use-the-usecontext-hook-in-react) instead of localStroage (token is always stored to localStorage). With Context API you can create a global state which can be accessed from all components.
     * create new folder 'contexts' to 'src'. Create 'MediaContext.js' to 'contexts':
     ```javascript
     import React, {useState} from 'react';
@@ -129,4 +129,5 @@
    const [user, setUser] = useContext(MediaContext);
    setUser(userdataFromApi); 
    ```
+1. Now that the user data is in the context, modify Profile.js to use that user data instead of loading it from the API
 1. Add and commit changes to git, push to Github/GItLab. Build and upload to users.metropolia.fi. Remember to update the url in README.md
