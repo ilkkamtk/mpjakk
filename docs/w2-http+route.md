@@ -120,10 +120,10 @@ Study [React Router Tutorial](https://www.youtube.com/watch?v=Law7wfdg_ls)
      const file = {}; // TODO in the next task: single media from props.location.state
    
      return (
-       <React.Fragment>
+       <>
          <h1>{file.title}</h1>
          <img src={mediaUrl + file.filename} alt={file.title}/>
-       </React.Fragment>
+       </>
      );
    };
    
