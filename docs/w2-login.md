@@ -59,10 +59,10 @@
 
    ```
     
-1. In APiHooks.js create functions 'register', 'login' and 'checkUserAvailable' with corresponding functionalities. Log the results of API fetches to console at this point.
-    * Example 'register' function:
+1. In APiHooks.js create new hooks 'useLogin' and 'useUser'. Add 'postLogin' to 'useLogin' 'postUser' and 'getUser' to 'useUser'. Add corresponding functionalities to 'postLogin' and 'postUser'. Log the results of API fetches to console at this point.
+    * Example 'postUser' function:
     ```javascript
-    const register = async (inputs) => {
+    const postUser = async (inputs) => {
       const fetchOptions = {
         method: 'POST',
         headers: {
@@ -75,21 +75,19 @@
       console.log(json);
     };
     ```
-    * RegisterForm.js: set APiHooks.js's 'register' function as a callback to to 'useForm' and fill the registartion form in your browser. Check the log.
-    * LoginForm.js: set APiHooks.js's 'login' function as a callback to to 'useForm' and fill the login form in your browser. Check the log.
+    * RegisterForm.js: set APiHooks.js's 'postUser' function as a callback to to 'useForm' and fill the registartion form in your browser. Check the log.
+    * LoginForm.js: set APiHooks.js's 'postLogin' function as a callback to to 'useForm' and fill the login form in your browser. Check the log.
 1. Add the final functionalities:
-    * when logging in, save user data to [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage). Also [redirect](https://tylermcginnis.com/react-router-programmatically-navigate/) to 'Home'
-    * display user's info (username, fullname and email) in Profile.js
+    * when logging in, save token to [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage). Also [redirect](https://tylermcginnis.com/react-router-programmatically-navigate/) to 'Home'
+    * display user's info (username, fullname and email) in Profile.js. Add this functionality to getUser function in useUser hook. In the API this is [/users/user](http://media.mw.metropolia.fi/wbma/docs/#api-User-GetCurrentUser) endpoint
     * if user has already logged in, redirect to 'Home' (autoredirect)
-        * for this, save token to [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) when logging in. Then when the app starts, use [/users/user](http://media.mw.metropolia.fi/wbma/docs/#api-User-GetCurrentUser) endpoint to check if the token is valid
-    * when registering  
-        * login automatically after succesful registration
-        * check if username already exists before trying to register
+        * for this, save token to [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) when logging in. Then when the app starts, use 'getUser' to check if the token is valid. 
+    * when registering check if username already exists before trying to register by using [/users/username/:username](https://media.mw.metropolia.fi/wbma/docs/#api-User-CheckUserName) endpoint
     * Logout.js: logout (clear localstorage, redirect to Home)
 1. Study [conditional rendering](https://reactjs.org/docs/conditional-rendering.html)
     * when user is logged in, show Profile and Logout links in Nav. When user is logged out, hide Profile and Logout and show Login.
-    * since updating the DOM requires a state change, user data needs to be saved into a state instead of localStorage. But which state?
-    * save user data with [ContextAPI](https://upmostly.com/tutorials/how-to-use-the-usecontext-hook-in-react) instead of localStroage (token is always stored to localStorage). With Context API you can create a global state which can be accessed from all components.
+      * since updating the DOM requires a state change, user data needs to be saved into a state instead of localStorage. But which state?
+      * save user data with [ContextAPI](https://upmostly.com/tutorials/how-to-use-the-usecontext-hook-in-react) instead of localStroage (token is always stored to localStorage). With Context API you can create a global state which can be accessed from all components.
     * create new folder 'contexts' to 'src'. Create 'MediaContext.js' to 'contexts':
     ```javascript
     import React, {useState} from 'react';
@@ -114,18 +112,15 @@
     export {MediaContext, MediaProvider};
 
     ```
-    * add <MediaProvider> to app.js:
+    * add `<MediaProvider>` to app.js:
     ```jsx harmony
     <Router basename={process.env.PUBLIC_URL}>
           <MediaProvider>
             <Nav/>
-            <Switch>
-              <Route path="/" exact component={Home}/>
-              <Route path="/login" component={Login}/>
-              <Route path="/profile" component={Profile}/>
-              <Route path="/logout" component={Logout}/>
-              <Route path="/single" component={Single}/>
-            </Switch>
+            <Routes>
+              <Route />
+              <Route />
+            </Routes>
           </MediaProvider>
         </Router>
     ```
@@ -134,4 +129,5 @@
    const [user, setUser] = useContext(MediaContext);
    setUser(userdataFromApi); 
    ```
-1. Add and commit changes to git, push to Github/GItLab. Build and upload to users.metropolia.fi
+1. Now that the user data is in the context, modify Profile.js to use that user data instead of loading it from the API
+1. Add and commit changes to git, push to Github/GItLab. Build and upload to users.metropolia.fi. Remember to update the url in README.md

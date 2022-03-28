@@ -26,6 +26,7 @@ Study: [Create React App](https://github.com/facebook/create-react-app)
    git init
    git add .
    git commit -m "first commit"
+   git branch -M main
    git remote add origin https://copy.address.here.git
    git push -u origin main
    

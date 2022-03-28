@@ -8,7 +8,7 @@ class: center, middle
 
 1. [Get Postman](https://www.getpostman.com/) and take a look at [docs & tutorials](https://www.getpostman.com/docs/).
 1. or [Get Insomnia](https://insomnia.rest/)
-2. Check [Media API docs](https://media-new.mw.metropolia.fi/wbma/docs/) Base URL for the api endpoints is <https://media-new.mw.metropolia.fi/wbma> 
+2. Check [Media API docs](https://media.mw.metropolia.fi/wbma/docs/) Base URL for the api endpoints is <https://media.mw.metropolia.fi/wbma> 
 
 Use Postman to:
 

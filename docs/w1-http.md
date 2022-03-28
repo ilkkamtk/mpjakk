@@ -41,9 +41,9 @@ Study [State Hook](https://reactjs.org/docs/hooks-state.html), [Effect Hook](htt
 
 1. Continue last exercise. Create a new git branch `http-b` and use it.
 2. Modify the app so that you fetch the data from the media API instead of test.json
-    - [Documentation](https://media-new.mw.metropolia.fi/wbma/docs/)
-    - base url: https://media-new.mw.metropolia.fi/wbma/
-    - Media files location: http://media-new.mw.metropolia.fi/wbma/uploads/
+    - [Documentation](https://media.mw.metropolia.fi/wbma/docs/)
+    - base url: https://media.mw.metropolia.fi/wbma/
+    - Media files location: http://media.mw.metropolia.fi/wbma/uploads/
 3. Modify loadMedia function to load the data from the '/media' endpoint of the API.
 4. First log the data using ```console.log()```
     - Note that '/media' endpoint doesn't give you thumbnails. You need to do a nested request to '/media/:id' to get also thumbnails.
@@ -58,5 +58,10 @@ Study [State Hook](https://reactjs.org/docs/hooks-state.html), [Effect Hook](htt
         }));
         ```
 5. Save the data to state and then print the data to the table
-6. git add, commit & push to remote repository
-7. Deploy project to your public_html
+
+### Submit
+1. Run `npm build` or `npm run build`
+2. Move build folder to your public_html
+3. Test your app: `http://users.metropolia.fi/~username/somefolder`
+4. Modify README.md. Change the link in `Open [http://localhost:3000](http://localhost:3000) to view it in the browser.` to point to the above link.
+5. git add, commit & push to remote repository
