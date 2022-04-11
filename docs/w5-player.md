@@ -39,5 +39,5 @@
     - modify is 90% same as UploadPage
         - make a copy of Upload.js and remove file chooser
         
-### Extra. Study how to [protect routes](https://ui.dev/react-router-v5-protected-routes-authentication/)
+### Extra. Study how to [protect routes](https://ui.dev/react-router-protected-routes-authentication)
 
