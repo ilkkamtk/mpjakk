@@ -40,18 +40,4 @@
         - make a copy of Upload.js and remove file chooser
         
 ### Extra. Study how to [protect routes](https://ui.dev/react-router-v5-protected-routes-authentication/)
-### AJAX error handling
-```javascript
-const response = await fetch(url, options);
-const json = await response.json();
-if (json.error) {
-   // if API response contains error message (use Postman to get further details)
-   throw new Error(json.message + ': ' + json.error);
-} else if (!response.ok) {
-   // if API response does not contain error message, but there is some other error
-   throw new Error('doFetch failed');
-} else {
-   // if all goes well
-   return json;
-}
-```
+
