@@ -45,6 +45,7 @@ Course content is inside [docs](docs/) folder.
 3. What is React: https://youtu.be/N3AkSS5hXMA
 4. Learn React in five minutes: https://www.youtube.com/watch?v=MRIMT0xPXFI
 5. If five minutes is not enough: https://youtu.be/w7ejDZ8SWv8
+   * React Router v6 update to previous video: https://youtu.be/k2Zk5cbiZhg
 6. [Online book: React.js Training](https://rangle-io.gitbooks.io/react-training/content/)
 7. [Full stack open](https://fullstackopen.com/)
 
