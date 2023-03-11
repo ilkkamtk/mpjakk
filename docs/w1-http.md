@@ -6,7 +6,7 @@ class: center, middle
 
 Study [Understanding and handling API requests](https://www.youtube.com/watch?v=2N9iqkWfjC8&list=PLDIXF8nb0VG1v4S-smVy7GV0MHsJ3PJiL&index=7) and [Using Hooks](https://www.youtube.com/watch?v=rEFYriigJ5A&list=PLDIXF8nb0VG1v4S-smVy7GV0MHsJ3PJiL&index=9)
 
-Study [State Hook](https://reactjs.org/docs/hooks-state.html), [Effect Hook](https://reactjs.org/docs/hooks-effect.html) and this article
+Study [State Hook](https://reactjs.org/docs/hooks-state.html), [What are effects](https://beta.reactjs.org/learn/synchronizing-with-effects) and [Effect Hook](https://reactjs.org/docs/hooks-effect.html)
 
 # Fetching data with AJAX, Task A
 
