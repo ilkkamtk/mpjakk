@@ -9,13 +9,13 @@ Study [Learn React JS ](https://www.youtube.com/watch?v=w7ejDZ8SWv8)
 
 **a.**
 
-Study: [Create React App](https://github.com/facebook/create-react-app)
+Study: [Vite](https://vitejs.dev/)
 
-1. If needed, install code editor (+ extensions), git, npm
-1. Use the `create-react-app` cli tool to generate an app skeleton `npx create-react-app my-app`
+1. If needed, install code editor (+ [extensions](w1-toolchain.md#install-extensions)), git, npm
+1. Use the `vite` cli tool to generate an app skeleton `npm create vite@latest my-app --template react`
 1. Test that app works; run it and open in browser
    - `cd my-app`
-   - `npm start`
+   - `npm run dev`
 1. Create a remote git repository and push your app there
    - If you want to make public repository you can use GitHub
    - If you want to make private reposistory (only for metropolia users) use gitlab.metropolia.fi
@@ -46,7 +46,7 @@ Study: [Create React App](https://github.com/facebook/create-react-app)
 
 **b.**  
 1. Install ESlint to your project `npm i -D eslint eslint-plugin-react`
-2. Initialize ESlint: `npm eslint --init` or `node eslint --init` or `./node_modules/.bin/eslint --init` or `node node_modules\eslint\bin\eslint.js --init`
+2. Initialize ESlint: `npm init @eslint/config` (or `npm eslint --init` or `node eslint --init` or `./node_modules/.bin/eslint --init` or `node node_modules\eslint\bin\eslint.js --init`)
     * Choose:
         1. To check syntax, find problems, and enforce code style
         1. JavaScript modules (import/export)
@@ -57,7 +57,7 @@ Study: [Create React App](https://github.com/facebook/create-react-app)
         1. Google (or AirBnb if you prefer that)
         1. JavaScript
         1. Y
-3. Enable ESLint in your WebStrom project (google instructions for VSCode)
+3. Enable ESLint in your WebStrom project (or install ESLint extension in VSCode)
    - [Instructions](https://www.jetbrains.com/help/webstorm/eslint.html)
       - [Importing code style](https://www.jetbrains.com/help/webstorm/eslint.html#ws_js_linters_eslint_import_code_style_from_eslint) is the most interesting part
 4. Modify .eslintrc.js:
@@ -242,18 +242,20 @@ Study: [Create React App](https://github.com/facebook/create-react-app)
 
 ## Deploy React Project
 
-1. Add following to package.json (e.g after devDependencies):
+1. Modify `scripts` in package.json:
     ```json
-     "homepage": "."
+      "build": "vite build --base=./",
     ```
 1. Run `npm build` or `npm run build`
-1. Set deployment settings in WebStorm:
+1. Set deployment settings in WebStorm or use FileZilla to transfer files to shell.metropolia.fi:
     ![Build conf0](./images/build_conf0.png)
     ![Build conf1](./images/build_conf1.png)
     ![Build conf2](./images/build_conf2.png)
 1. Move build folder to your public_html
-1. Test your app: `http://users.metropolia.fi/~username/somefolder`
-1. Modify README.md. Change the link in `Open [http://localhost:3000](http://localhost:3000) to view it in the browser.` to point to the above link.
+1. Test your app: `https://users.metropolia.fi/~username/somefolder`
+1. Add/modify README.md. Add a link: `Open [https://users.metropolia.fi/~username/somefolder](https://users.metropolia.fi/~username/somefolder) to view it in the browser.`. 
+   - Obviously change the path so that it points to the correct folder so the teacher can test your app.
+   - Create a new folder for each build when you submit tasks to Oma.
 1. Add, commit and push to git
    ```text
    git add .
@@ -261,4 +263,4 @@ Study: [Create React App](https://github.com/facebook/create-react-app)
    git push
    ```
 1. Make sure the link works in Github/GitLab
-1. Submit to Oma
+1. Submit a link to the repository in Oma
