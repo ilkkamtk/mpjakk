@@ -179,7 +179,7 @@ Study: [Vite](https://vitejs.dev/)
 
 1. Develop your app further. Make the table dynamically by using this array:
     ```javascript
-    // add to App.js after imports
+    // add to App.jsx after imports
       
     const mediaArray = [
           {
