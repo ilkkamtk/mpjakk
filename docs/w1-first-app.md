@@ -15,6 +15,7 @@ Study: [Vite](https://vitejs.dev/)
 1. Use the `vite` cli tool to generate an app skeleton `npm create vite@latest my-app --template react`
 1. Test that app works; run it and open in browser
    - `cd my-app`
+   - `npm i`
    - `npm run dev`
 1. Create a remote git repository and push your app there
    - If you want to make public repository you can use GitHub
