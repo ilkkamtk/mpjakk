@@ -150,15 +150,17 @@ Study [React Router Tutorial](https://www.youtube.com/watch?v=UjHT_NKR_gU)
     ```
 1. In Single.jsx receive state from location prop and save it variable 'file' to display the title in `<h1>` element and file in `<img>` element.
 1. To make links work also on remote server after building, add environment variables and basename attribute to Route:
-   - add `.env` to project root. Content: `PUBLIC_URL='/~username/foldername'`
-   - add `.env.development` to project root. Content: `PUBLIC_URL='/'`
    - add to App.jsx:`
     ```jsx harmony
     <Router basename={import.meta.env.BASE_URL}>
     ```
+   - Modify `scripts` in package.json:
+    ```json
+      "build": "vite build --base=./~username/foldername/",
+    ```
 1. git add, commit & push to remote repository
 1. Deploy project to your public_html
-1. You will get 'Not found' error when you refresh e.g. `http://users.metropolia.fi/~username/foldername/home`. To fix this, add `.htaccess` to your server to the same folder where you have `index.html` of your app:
+1. If you get 'Not found' error when you open e.g. `http://users.metropolia.fi/~username/foldername/profile`. To fix this, add `.htaccess` to your server to the same folder where you have `index.html` of your app:
    ```text
    RewriteEngine On
    RewriteCond %{REQUEST_FILENAME} !-f
