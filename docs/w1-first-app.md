@@ -19,7 +19,7 @@ Study: [Vite](https://vitejs.dev/)
    - `npm run dev`
 1. Create a remote git repository and push your app there
    - If you want to make public repository you can use GitHub
-   - If you want to make private reposistory (only for metropolia users) use gitlab.metropolia.fi
+   - If you want to make internal reposistory (only for metropolia users) use gitlab.metropolia.fi
    - After creating the repository initialize git and set up remote:
    ```text
    #If you use GitHub:
