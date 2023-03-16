@@ -48,7 +48,7 @@ Search and install:
 - Auto Import or Auto Import - ES6, TS, JSX, TSX
 - ESLint
 - JavaScript (ES6) Code Snippets
-- ES7 React/Redux/GraphQL/React-Native snippets
+- ES7+ React/Redux/React-Native snippets
 
 Other handy extensions:
 
