@@ -81,7 +81,6 @@ Handy keyboard shortcuts (finnish layout, check _File -> Preferences -> Keyboard
 
 #### Other picks
 
-- [Atom](https://atom.io/)
 - [Brackets](http://brackets.io/)
 - Other IDEs like: IntelliJ Ultimate IDEA, Eclipse, NetBeans... 
 
