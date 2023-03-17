@@ -63,5 +63,5 @@ Study [State Hook](https://reactjs.org/docs/hooks-state.html), [What are effects
 1. Run `npm build` or `npm run build`
 2. Move build folder to your public_html
 3. Test your app: `http://users.metropolia.fi/~username/somefolder`
-4. Modify README.md. Change the link in `Open [http://localhost:3000](http://localhost:3000) to view it in the browser.` to point to the above link.
+4. Modify README.md. Change the link in `Open [X](X) to view it in the browser.` to point to the above link.
 5. git add, commit & push to remote repository
