@@ -32,8 +32,8 @@ Study [State Hook](https://reactjs.org/docs/hooks-state.html), [What are effects
    - what do you see in the console?
 7. Prevent infinite loop with [useEffect](https://www.robinwieruch.de/react-hooks-fetch-data).
 8. Use [try/catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) to catch possible errors from promises.
-9. git add, commit & push to remote repository
-10. Deploy project to your public_html 
+9. Deploy project to your public_html 
+10. git add, commit & push to remote repository
 
 ---
 
