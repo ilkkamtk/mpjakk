@@ -44,7 +44,7 @@ Study [State Hook](https://reactjs.org/docs/hooks-state.html), [What are effects
     - [Documentation](https://media.mw.metropolia.fi/wbma/docs/)
     - base url: https://media.mw.metropolia.fi/wbma/
     - Media files location: http://media.mw.metropolia.fi/wbma/uploads/
-3. Modify loadMedia function to load the data from the '/media' endpoint of the API.
+3. Modify getMedia function to load the data from the '/media' endpoint of the API.
 4. First log the data using ```console.log()```
     - Note that '/media' endpoint doesn't give you thumbnails. You need to do a nested request to '/media/:id' to get also thumbnails.
         - Study Promise.all [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) and [here](http://promise-nuggets.github.io/articles/14-map-in-parallel.html)
