@@ -114,9 +114,8 @@
     ```
     * add `<MediaProvider>` to app.js:
     ```jsx harmony
-    <Router basename={process.env.PUBLIC_URL}>
+      <Router>
           <MediaProvider>
-            <Nav/>
             <Routes>
               <Route />
               <Route />
