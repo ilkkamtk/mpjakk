@@ -32,8 +32,8 @@ Study [State Hook](https://reactjs.org/docs/hooks-state.html), [What are effects
    - what do you see in the console?
 7. Prevent infinite loop with [useEffect](https://www.robinwieruch.de/react-hooks-fetch-data).
 8. Use [try/catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) to catch possible errors from promises.
-9. git add, commit & push to remote repository
-10. Deploy project to your public_html 
+9. Deploy project to your public_html 
+10. git add, commit & push to remote repository
 
 ---
 
@@ -44,7 +44,7 @@ Study [State Hook](https://reactjs.org/docs/hooks-state.html), [What are effects
     - [Documentation](https://media.mw.metropolia.fi/wbma/docs/)
     - base url: https://media.mw.metropolia.fi/wbma/
     - Media files location: http://media.mw.metropolia.fi/wbma/uploads/
-3. Modify loadMedia function to load the data from the '/media' endpoint of the API.
+3. Modify getMedia function to load the data from the '/media' endpoint of the API.
 4. First log the data using ```console.log()```
     - Note that '/media' endpoint doesn't give you thumbnails. You need to do a nested request to '/media/:id' to get also thumbnails.
         - Study Promise.all [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) and [here](http://promise-nuggets.github.io/articles/14-map-in-parallel.html)
@@ -63,5 +63,5 @@ Study [State Hook](https://reactjs.org/docs/hooks-state.html), [What are effects
 1. Run `npm build` or `npm run build`
 2. Move build folder to your public_html
 3. Test your app: `http://users.metropolia.fi/~username/somefolder`
-4. Modify README.md. Change the link in `Open [http://localhost:3000](http://localhost:3000) to view it in the browser.` to point to the above link.
+4. Modify README.md. Change the link in `Open [X](X) to view it in the browser.` to point to the above link.
 5. git add, commit & push to remote repository
