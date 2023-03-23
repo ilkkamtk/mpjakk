@@ -56,7 +56,7 @@ Study [React Router Tutorial](https://www.youtube.com/watch?v=UjHT_NKR_gU)
     * main menu has two links: 'Home' and 'Profile'
     * Each media file has 'view' link next to it. Clicking that should take to 'Single' and then display the selected media file
 4. Create new folder 'views' to folder 'src'
-5. Create new component 'views/Layout.jsx' (to components folder)
+5. Create new component 'views/Layout.jsx
     * content for Layout.jsx:
     ```jsx
     import {Outlet} from 'react-router-dom';
