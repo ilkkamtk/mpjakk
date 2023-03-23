@@ -7,12 +7,12 @@
 1. Install [React Develper Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) to Chrome
 1. Continue last exercise. Create a new branch with git.
 1. Create files:
-    * 'Login.js' and 'Logout.js' to 'views' 
+    * 'Login.jsx' and 'Logout.jsx' to 'views' 
     * 'FormHooks.js' to 'hooks' 
-    * 'LoginForm.js' and 'RegisterForm.js' to 'components'
+    * 'LoginForm.jsx' and 'RegisterForm.jsx' to 'components'
 1. Login.js will hold LoginForm and RegisterForm components
     * Add the usual imports, component function and export to Login, LoginForm and RegisterForm
-    * Login.js:
+    * Login.jsx:
     ```jsx harmony
     import LoginForm from '../components/LoginForm';
     import RegisterForm from '../components/RegisterForm';
@@ -29,11 +29,11 @@
     export default Login;
    ```
 1. Change routing so that Login is the root ("/") instead of Home. Add also a new route for Home.
-1. Add form to RegisterForm.js with username, password, email and full_name fields and submit button
+1. Add form to RegisterForm.jsx with username, password, email and full_name fields and submit button
     * Use 'Using React Hooks...' article as an example to handle form events. Instead of using 'CustomHooks.js' as filename, use 'FormHooks.js' and useForm as the function name instead of useSignUpForm
        * You need to do changes to useForm function:
         ```javascript
-        // FormHooks.js:
+        // FormHooks.jsx:
       const useForm = (callback, initState) => {
         const [inputs, setInputs] = useState(initState);
         
@@ -46,7 +46,7 @@
         ```
 1. Then in LoginForm make this change:
    ```javascript
-   // LoginForm.js:
+   // LoginForm.jsx:
    const doLogin = () => {
      console.log(inputs);
      // TODO: add login functionalities here
@@ -75,8 +75,8 @@
       console.log(json);
     };
     ```
-    * RegisterForm.js: set APiHooks.js's 'postUser' function as a callback to to 'useForm' and fill the registartion form in your browser. Check the log.
-    * LoginForm.js: set APiHooks.js's 'postLogin' function as a callback to to 'useForm' and fill the login form in your browser. Check the log.
+    * RegisterForm.jsx: set APiHooks.js's 'postUser' function as a callback to to 'useForm' and fill the registartion form in your browser. Check the log.
+    * LoginForm.jsx: set APiHooks.js's 'postLogin' function as a callback to to 'useForm' and fill the login form in your browser. Check the log.
 1. Add the final functionalities:
     * when logging in, save token to [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage). Also [redirect](https://tylermcginnis.com/react-router-programmatically-navigate/) to 'Home'
     * display user's info (username, fullname and email) in Profile.js. Add this functionality to getUser function in useUser hook. In the API this is [/users/user](http://media.mw.metropolia.fi/wbma/docs/#api-User-GetCurrentUser) endpoint
@@ -88,7 +88,7 @@
     * when user is logged in, show Profile and Logout links in Nav. When user is logged out, hide Profile and Logout and show Login.
       * since updating the DOM requires a state change, user data needs to be saved into a state instead of localStorage. But which state?
       * save user data with [ContextAPI](https://upmostly.com/tutorials/how-to-use-the-usecontext-hook-in-react) instead of localStroage (token is always stored to localStorage). With Context API you can create a global state which can be accessed from all components.
-    * create new folder 'contexts' to 'src'. Create 'MediaContext.js' to 'contexts':
+    * create new folder 'contexts' to 'src'. Create 'MediaContext.jsx' to 'contexts':
     ```javascript
     import React, {useState} from 'react';
     import PropTypes from 'prop-types';
@@ -112,7 +112,7 @@
     export {MediaContext, MediaProvider};
 
     ```
-    * add `<MediaProvider>` to app.js:
+    * add `<MediaProvider>` to App.jsx:
     ```jsx harmony
       <Router>
           <MediaProvider>
