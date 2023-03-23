@@ -83,7 +83,6 @@ Study [React Router Tutorial](https://www.youtube.com/watch?v=UjHT_NKR_gU)
     
     export default Layout;
     ```
-1. Add Nav-component to App.jsx so that you can see it above MediaTable component in browser
 1. Create 'Home.jsx', 'Single.jsx' and 'Profile.jsx' to 'views'
     * Home.jsx will be the component that should show first when the app starts
     * Content for Home.jsx (note: `<> is shorthand for <React.Fragment>`)
