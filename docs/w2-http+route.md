@@ -61,7 +61,7 @@ Study [React Router Tutorial](https://www.youtube.com/watch?v=UjHT_NKR_gU)
     ```jsx
     import {Outlet} from 'react-router-dom';
     
-    const Nav = () => {
+    const Layout = () => {
       return (
         <div>
           <nav>
@@ -81,7 +81,7 @@ Study [React Router Tutorial](https://www.youtube.com/watch?v=UjHT_NKR_gU)
       );
     };
     
-    export default Nav;
+    export default Layout;
     ```
 1. Add Nav-component to App.jsx so that you can see it above MediaTable component in browser
 1. Create 'Home.jsx', 'Single.jsx' and 'Profile.jsx' to 'views'
