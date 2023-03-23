@@ -155,7 +155,7 @@ Study [React Router Tutorial](https://www.youtube.com/watch?v=UjHT_NKR_gU)
     ```
    - Modify `scripts` in package.json:
     ```json
-      "build": "vite build --base=./~username/foldername/",
+      "build": "vite build --base=/~username/foldername/",
     ```
 1. git add, commit & push to remote repository
 1. Deploy project to your public_html
