@@ -10,7 +10,7 @@
     * 'Login.jsx' and 'Logout.jsx' to 'views' 
     * 'FormHooks.js' to 'hooks' 
     * 'LoginForm.jsx' and 'RegisterForm.jsx' to 'components'
-1. Login.js will hold LoginForm and RegisterForm components
+1. Login.jsx will hold LoginForm and RegisterForm components
     * Add the usual imports, component function and export to Login, LoginForm and RegisterForm
     * Login.jsx:
     ```jsx harmony
