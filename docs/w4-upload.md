@@ -57,7 +57,7 @@ class: center, middle
                      "contrast":110,
                      "warmth":10,
                      "saturation":90
-                   }",
+                   }
                },
            ...
            }
